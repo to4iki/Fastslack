@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1EF85E9D1C8342A10092A3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF85E9C1C8342A10092A3CF /* AppDelegate.swift */; };
+		1EF85E9F1C8342A10092A3CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF85E9E1C8342A10092A3CF /* ViewController.swift */; };
+		1EF85EA21C8342A10092A3CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EF85EA01C8342A10092A3CF /* Main.storyboard */; };
+		1EF85EA41C8342A10092A3CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EF85EA31C8342A10092A3CF /* Assets.xcassets */; };
+		1EF85EA71C8342A10092A3CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EF85EA51C8342A10092A3CF /* LaunchScreen.storyboard */; };
+		1EF85EB21C8342A10092A3CF /* FastslackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF85EB11C8342A10092A3CF /* FastslackTests.swift */; };
+		1EF85EBD1C8342A10092A3CF /* FastslackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF85EBC1C8342A10092A3CF /* FastslackUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1EF85EAE1C8342A10092A3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EF85E911C8342A00092A3CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EF85E981C8342A00092A3CF;
+			remoteInfo = Fastslack;
+		};
+		1EF85EB91C8342A10092A3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EF85E911C8342A00092A3CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EF85E981C8342A00092A3CF;
+			remoteInfo = Fastslack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1EF85E991C8342A00092A3CF /* Fastslack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fastslack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EF85E9C1C8342A10092A3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1EF85E9E1C8342A10092A3CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1EF85EA11C8342A10092A3CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1EF85EA31C8342A10092A3CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1EF85EA61C8342A10092A3CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1EF85EA81C8342A10092A3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EF85EAD1C8342A10092A3CF /* FastslackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastslackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EF85EB11C8342A10092A3CF /* FastslackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastslackTests.swift; sourceTree = "<group>"; };
+		1EF85EB31C8342A10092A3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EF85EB81C8342A10092A3CF /* FastslackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastslackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EF85EBC1C8342A10092A3CF /* FastslackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastslackUITests.swift; sourceTree = "<group>"; };
+		1EF85EBE1C8342A10092A3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1EF85E961C8342A00092A3CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF85EAA1C8342A10092A3CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF85EB51C8342A10092A3CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EF85E901C8342A00092A3CF = {
+			isa = PBXGroup;
+			children = (
+				1EF85E9B1C8342A00092A3CF /* Fastslack */,
+				1EF85EB01C8342A10092A3CF /* FastslackTests */,
+				1EF85EBB1C8342A10092A3CF /* FastslackUITests */,
+				1EF85E9A1C8342A00092A3CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1EF85E9A1C8342A00092A3CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EF85E991C8342A00092A3CF /* Fastslack.app */,
+				1EF85EAD1C8342A10092A3CF /* FastslackTests.xctest */,
+				1EF85EB81C8342A10092A3CF /* FastslackUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EF85E9B1C8342A00092A3CF /* Fastslack */ = {
+			isa = PBXGroup;
+			children = (
+				1EF85E9C1C8342A10092A3CF /* AppDelegate.swift */,
+				1EF85E9E1C8342A10092A3CF /* ViewController.swift */,
+				1EF85EA01C8342A10092A3CF /* Main.storyboard */,
+				1EF85EA31C8342A10092A3CF /* Assets.xcassets */,
+				1EF85EA51C8342A10092A3CF /* LaunchScreen.storyboard */,
+				1EF85EA81C8342A10092A3CF /* Info.plist */,
+			);
+			path = Fastslack;
+			sourceTree = "<group>";
+		};
+		1EF85EB01C8342A10092A3CF /* FastslackTests */ = {
+			isa = PBXGroup;
+			children = (
+				1EF85EB11C8342A10092A3CF /* FastslackTests.swift */,
+				1EF85EB31C8342A10092A3CF /* Info.plist */,
+			);
+			path = FastslackTests;
+			sourceTree = "<group>";
+		};
+		1EF85EBB1C8342A10092A3CF /* FastslackUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1EF85EBC1C8342A10092A3CF /* FastslackUITests.swift */,
+				1EF85EBE1C8342A10092A3CF /* Info.plist */,
+			);
+			path = FastslackUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1EF85E981C8342A00092A3CF /* Fastslack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EF85EC11C8342A10092A3CF /* Build configuration list for PBXNativeTarget "Fastslack" */;
+			buildPhases = (
+				1EF85E951C8342A00092A3CF /* Sources */,
+				1EF85E961C8342A00092A3CF /* Frameworks */,
+				1EF85E971C8342A00092A3CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fastslack;
+			productName = Fastslack;
+			productReference = 1EF85E991C8342A00092A3CF /* Fastslack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1EF85EAC1C8342A10092A3CF /* FastslackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EF85EC41C8342A10092A3CF /* Build configuration list for PBXNativeTarget "FastslackTests" */;
+			buildPhases = (
+				1EF85EA91C8342A10092A3CF /* Sources */,
+				1EF85EAA1C8342A10092A3CF /* Frameworks */,
+				1EF85EAB1C8342A10092A3CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EF85EAF1C8342A10092A3CF /* PBXTargetDependency */,
+			);
+			name = FastslackTests;
+			productName = FastslackTests;
+			productReference = 1EF85EAD1C8342A10092A3CF /* FastslackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1EF85EB71C8342A10092A3CF /* FastslackUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EF85EC71C8342A10092A3CF /* Build configuration list for PBXNativeTarget "FastslackUITests" */;
+			buildPhases = (
+				1EF85EB41C8342A10092A3CF /* Sources */,
+				1EF85EB51C8342A10092A3CF /* Frameworks */,
+				1EF85EB61C8342A10092A3CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EF85EBA1C8342A10092A3CF /* PBXTargetDependency */,
+			);
+			name = FastslackUITests;
+			productName = FastslackUITests;
+			productReference = 1EF85EB81C8342A10092A3CF /* FastslackUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1EF85E911C8342A00092A3CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = to4iki;
+				TargetAttributes = {
+					1EF85E981C8342A00092A3CF = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = KX9834768X;
+					};
+					1EF85EAC1C8342A10092A3CF = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = KX9834768X;
+						TestTargetID = 1EF85E981C8342A00092A3CF;
+					};
+					1EF85EB71C8342A10092A3CF = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = KX9834768X;
+						TestTargetID = 1EF85E981C8342A00092A3CF;
+					};
+				};
+			};
+			buildConfigurationList = 1EF85E941C8342A00092A3CF /* Build configuration list for PBXProject "Fastslack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1EF85E901C8342A00092A3CF;
+			productRefGroup = 1EF85E9A1C8342A00092A3CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EF85E981C8342A00092A3CF /* Fastslack */,
+				1EF85EAC1C8342A10092A3CF /* FastslackTests */,
+				1EF85EB71C8342A10092A3CF /* FastslackUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1EF85E971C8342A00092A3CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF85EA71C8342A10092A3CF /* LaunchScreen.storyboard in Resources */,
+				1EF85EA41C8342A10092A3CF /* Assets.xcassets in Resources */,
+				1EF85EA21C8342A10092A3CF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF85EAB1C8342A10092A3CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF85EB61C8342A10092A3CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1EF85E951C8342A00092A3CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF85E9F1C8342A10092A3CF /* ViewController.swift in Sources */,
+				1EF85E9D1C8342A10092A3CF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF85EA91C8342A10092A3CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF85EB21C8342A10092A3CF /* FastslackTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF85EB41C8342A10092A3CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EF85EBD1C8342A10092A3CF /* FastslackUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1EF85EAF1C8342A10092A3CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EF85E981C8342A00092A3CF /* Fastslack */;
+			targetProxy = 1EF85EAE1C8342A10092A3CF /* PBXContainerItemProxy */;
+		};
+		1EF85EBA1C8342A10092A3CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EF85E981C8342A00092A3CF /* Fastslack */;
+			targetProxy = 1EF85EB91C8342A10092A3CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1EF85EA01C8342A10092A3CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EF85EA11C8342A10092A3CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1EF85EA51C8342A10092A3CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EF85EA61C8342A10092A3CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1EF85EBF1C8342A10092A3CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1EF85EC01C8342A10092A3CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1EF85EC21C8342A10092A3CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Fastslack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.to4iki.Fastslack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1EF85EC31C8342A10092A3CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Fastslack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.to4iki.Fastslack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1EF85EC51C8342A10092A3CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FastslackTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.to4iki.FastslackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fastslack.app/Fastslack";
+			};
+			name = Debug;
+		};
+		1EF85EC61C8342A10092A3CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FastslackTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.to4iki.FastslackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fastslack.app/Fastslack";
+			};
+			name = Release;
+		};
+		1EF85EC81C8342A10092A3CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FastslackUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.to4iki.FastslackUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Fastslack;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		1EF85EC91C8342A10092A3CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FastslackUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.to4iki.FastslackUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Fastslack;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EF85E941C8342A00092A3CF /* Build configuration list for PBXProject "Fastslack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EF85EBF1C8342A10092A3CF /* Debug */,
+				1EF85EC01C8342A10092A3CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EF85EC11C8342A10092A3CF /* Build configuration list for PBXNativeTarget "Fastslack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EF85EC21C8342A10092A3CF /* Debug */,
+				1EF85EC31C8342A10092A3CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1EF85EC41C8342A10092A3CF /* Build configuration list for PBXNativeTarget "FastslackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EF85EC51C8342A10092A3CF /* Debug */,
+				1EF85EC61C8342A10092A3CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1EF85EC71C8342A10092A3CF /* Build configuration list for PBXNativeTarget "FastslackUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EF85EC81C8342A10092A3CF /* Debug */,
+				1EF85EC91C8342A10092A3CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1EF85E911C8342A00092A3CF /* Project object */;
+}
