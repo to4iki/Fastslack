@@ -135,6 +135,7 @@
 				1EF85E951C8342A00092A3CF /* Sources */,
 				1EF85E961C8342A00092A3CF /* Frameworks */,
 				1EF85E971C8342A00092A3CF /* Resources */,
+				1E6FBCAD1C83444B00A590B4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -253,6 +254,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E6FBCAD1C83444B00A590B4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1EF85E951C8342A00092A3CF /* Sources */ = {
@@ -487,6 +504,7 @@
 				1EF85EC31C8342A10092A3CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1EF85EC41C8342A10092A3CF /* Build configuration list for PBXNativeTarget "FastslackTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +513,7 @@
 				1EF85EC61C8342A10092A3CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1EF85EC71C8342A10092A3CF /* Build configuration list for PBXNativeTarget "FastslackUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +522,7 @@
 				1EF85EC91C8342A10092A3CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
