@@ -78,6 +78,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1ED7EED51C85763B00CBE184 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				1EF85E9E1C8342A10092A3CF /* MainViewController.swift */,
+				1E7730A01C84952900C47C89 /* NotesViewController.swift */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+		1ED7EED61C85765100CBE184 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		1ED7EED71C85765800CBE184 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		1ED7EED81C85767800CBE184 /* data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		1ED7EED91C85768600CBE184 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1EF85EA31C8342A10092A3CF /* Assets.xcassets */,
+				1EF85EA51C8342A10092A3CF /* LaunchScreen.storyboard */,
+				1EF85EA01C8342A10092A3CF /* Main.storyboard */,
+				1E77309E1C84930B00C47C89 /* Notes.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		1EF85E901C8342A00092A3CF = {
 			isa = PBXGroup;
 			children = (
@@ -101,13 +142,12 @@
 		1EF85E9B1C8342A00092A3CF /* Fastslack */ = {
 			isa = PBXGroup;
 			children = (
+				1ED7EED81C85767800CBE184 /* data */,
+				1ED7EED71C85765800CBE184 /* domain */,
+				1ED7EED91C85768600CBE184 /* view */,
+				1ED7EED51C85763B00CBE184 /* viewController */,
+				1ED7EED61C85765100CBE184 /* viewModel */,
 				1EF85E9C1C8342A10092A3CF /* AppDelegate.swift */,
-				1EF85E9E1C8342A10092A3CF /* MainViewController.swift */,
-				1E7730A01C84952900C47C89 /* NotesViewController.swift */,
-				1EF85EA01C8342A10092A3CF /* Main.storyboard */,
-				1E77309E1C84930B00C47C89 /* Notes.storyboard */,
-				1EF85EA31C8342A10092A3CF /* Assets.xcassets */,
-				1EF85EA51C8342A10092A3CF /* LaunchScreen.storyboard */,
 				1EF85EA81C8342A10092A3CF /* Info.plist */,
 			);
 			path = Fastslack;
@@ -327,6 +367,7 @@
 				1EF85EA11C8342A10092A3CF /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		1EF85EA51C8342A10092A3CF /* LaunchScreen.storyboard */ = {
@@ -335,6 +376,7 @@
 				1EF85EA61C8342A10092A3CF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
