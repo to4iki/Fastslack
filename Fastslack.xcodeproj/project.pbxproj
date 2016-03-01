@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E77309F1C84930B00C47C89 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E77309E1C84930B00C47C89 /* Notes.storyboard */; };
 		1E7730A11C84952900C47C89 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7730A01C84952900C47C89 /* NotesViewController.swift */; };
+		1EBE57D21C8578A20043C652 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBE57D11C8578A20043C652 /* XCGLogger.framework */; };
+		1EBE57D71C857E4F0043C652 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBE57D61C857E4F0043C652 /* Logger.swift */; };
 		1EF85E9D1C8342A10092A3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF85E9C1C8342A10092A3CF /* AppDelegate.swift */; };
 		1EF85E9F1C8342A10092A3CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF85E9E1C8342A10092A3CF /* MainViewController.swift */; };
 		1EF85EA21C8342A10092A3CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EF85EA01C8342A10092A3CF /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		1E77309E1C84930B00C47C89 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		1E7730A01C84952900C47C89 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		1EBE57D11C8578A20043C652 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
+		1EBE57D61C857E4F0043C652 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1EF85E991C8342A00092A3CF /* Fastslack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fastslack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF85E9C1C8342A10092A3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EF85E9E1C8342A10092A3CF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EBE57D21C8578A20043C652 /* XCGLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +109,7 @@
 		1ED7EED81C85767800CBE184 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				1EBE57D61C857E4F0043C652 /* Logger.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -122,6 +128,7 @@
 		1EF85E901C8342A00092A3CF = {
 			isa = PBXGroup;
 			children = (
+				1EBE57D11C8578A20043C652 /* XCGLogger.framework */,
 				1EF85E9B1C8342A00092A3CF /* Fastslack */,
 				1EF85EB01C8342A10092A3CF /* FastslackTests */,
 				1EF85EBB1C8342A10092A3CF /* FastslackUITests */,
@@ -142,11 +149,11 @@
 		1EF85E9B1C8342A00092A3CF /* Fastslack */ = {
 			isa = PBXGroup;
 			children = (
-				1ED7EED81C85767800CBE184 /* data */,
-				1ED7EED71C85765800CBE184 /* domain */,
 				1ED7EED91C85768600CBE184 /* view */,
 				1ED7EED51C85763B00CBE184 /* viewController */,
 				1ED7EED61C85765100CBE184 /* viewModel */,
+				1ED7EED71C85765800CBE184 /* domain */,
+				1ED7EED81C85767800CBE184 /* data */,
 				1EF85E9C1C8342A10092A3CF /* AppDelegate.swift */,
 				1EF85EA81C8342A10092A3CF /* Info.plist */,
 			);
@@ -309,12 +316,13 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/XCGLogger.framework",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -326,6 +334,7 @@
 				1EF85E9F1C8342A10092A3CF /* MainViewController.swift in Sources */,
 				1EF85E9D1C8342A10092A3CF /* AppDelegate.swift in Sources */,
 				1E7730A11C84952900C47C89 /* NotesViewController.swift in Sources */,
+				1EBE57D71C857E4F0043C652 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +478,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Fastslack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.to4iki.Fastslack;
@@ -480,6 +493,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Fastslack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.to4iki.Fastslack;
