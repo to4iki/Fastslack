@@ -35,7 +35,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Archive" id="Ee5-8b-Tr4">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="9gb-mY-jMr"/>
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="9gb-mY-jMr">
+                            <connections>
+                                <action selector="onClickCloseButton:" destination="1Er-0d-neu" id="dUC-mt-FIq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLH-oe-MbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -8,23 +8,17 @@
 
 import UIKit
 
-/// New Note
 final class MainViewController: UIViewController {
 }
 
-// MARK: - LifeCycle
+// MARK: - UIViewController
 
 extension MainViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }
-
 
 // MARK: - Segue
 
@@ -35,7 +29,7 @@ extension MainViewController {
             where segue.identifier == "NotesSegue" else { fatalError() }
         
         toViewController.setCloseCompletionHandler({
-            print("close notes view controller")
+            log.info("close notes view controller")
         })
     }
 }

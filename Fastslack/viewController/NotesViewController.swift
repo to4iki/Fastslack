@@ -8,22 +8,17 @@
 
 import UIKit
 
-/// Archive Notes
 final class NotesViewController: UIViewController {
     
     private var closeCompletionHandler: (() -> Void)?
 }
 
-// MARK: - LifeCycle
+// MARK: - UIViewController
 
 extension NotesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 }
 
@@ -33,5 +28,14 @@ extension NotesViewController {
     
     func setCloseCompletionHandler(handler: () -> Void) {
         closeCompletionHandler = handler
+    }
+}
+
+// MARK: - Action
+
+extension NotesViewController {
+    
+    @IBAction func onClickCloseButton(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: closeCompletionHandler)
     }
 }
