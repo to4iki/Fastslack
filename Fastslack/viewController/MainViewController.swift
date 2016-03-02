@@ -9,6 +9,13 @@
 import UIKit
 
 final class MainViewController: UIViewController {
+    
+    @IBOutlet private weak var inputTextView: UITextView! {
+        didSet {
+            automaticallyAdjustsScrollViewInsets = false
+            autoFocus()
+        }
+    }
 }
 
 // MARK: - UIViewController
@@ -17,6 +24,15 @@ extension MainViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+}
+
+// MARK: - UI
+
+extension MainViewController {
+    
+    private func autoFocus() {
+        inputTextView.becomeFirstResponder()
     }
 }
 
@@ -30,6 +46,7 @@ extension MainViewController {
         
         toViewController.setCloseCompletionHandler({
             log.info("close notes view controller")
+            self.autoFocus()
         })
     }
 }
