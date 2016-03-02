@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LKg-b1-pmW">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="7ai-AO-Ma5">
+            <objects>
+                <navigationController id="LKg-b1-pmW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2oU-UL-odn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="s33-JV-cFo" kind="relationship" relationship="rootViewController" id="HaB-z1-XMj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="usD-iF-6MV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-299" y="386"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="e0E-2f-dx7">
+            <objects>
+                <viewController id="s33-JV-cFo" customClass="SettingViewController" customModule="Fastslack" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0hZ-xl-kk0"/>
+                        <viewControllerLayoutGuide type="bottom" id="nZv-FL-Lem"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cw4-HY-pxm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Setting" id="lyh-ND-A9Q">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="OFz-SK-Q6d">
+                            <connections>
+                                <action selector="onClickCloseButton:" destination="s33-JV-cFo" id="Dqg-uL-SVM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgp-Kt-oGY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="386"/>
+        </scene>
+    </scenes>
+</document>

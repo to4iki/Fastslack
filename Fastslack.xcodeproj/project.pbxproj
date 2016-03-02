@@ -18,6 +18,8 @@
 		1EF85EA71C8342A10092A3CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EF85EA51C8342A10092A3CF /* LaunchScreen.storyboard */; };
 		1EF85EB21C8342A10092A3CF /* FastslackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF85EB11C8342A10092A3CF /* FastslackTests.swift */; };
 		1EF85EBD1C8342A10092A3CF /* FastslackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF85EBC1C8342A10092A3CF /* FastslackUITests.swift */; };
+		1EFE26E51C872E0000D22F32 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFE26E41C872E0000D22F32 /* SettingViewController.swift */; };
+		1EFE26E91C87339700D22F32 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EFE26E81C87339700D22F32 /* Setting.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		1EF85EB81C8342A10092A3CF /* FastslackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastslackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF85EBC1C8342A10092A3CF /* FastslackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastslackUITests.swift; sourceTree = "<group>"; };
 		1EF85EBE1C8342A10092A3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EFE26E41C872E0000D22F32 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		1EFE26E81C87339700D22F32 /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			children = (
 				1EF85E9E1C8342A10092A3CF /* MainViewController.swift */,
 				1E7730A01C84952900C47C89 /* NotesViewController.swift */,
+				1EFE26E41C872E0000D22F32 /* SettingViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				1EF85EA51C8342A10092A3CF /* LaunchScreen.storyboard */,
 				1EF85EA01C8342A10092A3CF /* Main.storyboard */,
 				1E77309E1C84930B00C47C89 /* Notes.storyboard */,
+				1EFE26E81C87339700D22F32 /* Setting.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -288,6 +294,7 @@
 			files = (
 				1E77309F1C84930B00C47C89 /* Notes.storyboard in Resources */,
 				1EF85EA71C8342A10092A3CF /* LaunchScreen.storyboard in Resources */,
+				1EFE26E91C87339700D22F32 /* Setting.storyboard in Resources */,
 				1EF85EA41C8342A10092A3CF /* Assets.xcassets in Resources */,
 				1EF85EA21C8342A10092A3CF /* Main.storyboard in Resources */,
 			);
@@ -331,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EFE26E51C872E0000D22F32 /* SettingViewController.swift in Sources */,
 				1EF85E9F1C8342A10092A3CF /* MainViewController.swift in Sources */,
 				1EF85E9D1C8342A10092A3CF /* AppDelegate.swift in Sources */,
 				1E7730A11C84952900C47C89 /* NotesViewController.swift in Sources */,
