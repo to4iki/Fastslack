@@ -25,15 +25,11 @@
         <scene sceneID="YwK-R8-MFv">
             <objects>
                 <viewController id="1Er-0d-neu" customClass="NotesViewController" customModule="Fastslack" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="erb-dl-NtD"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZQz-Et-nL3"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="HZV-0V-KI7">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DOi-ju-AHe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                    </tableView>
                     <navigationItem key="navigationItem" title="Archive" id="Ee5-8b-Tr4">
                         <barButtonItem key="leftBarButtonItem" title="Close" id="9gb-mY-jMr">
                             <connections>
@@ -41,6 +37,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="DOi-ju-AHe" id="sHl-KK-fVC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLH-oe-MbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

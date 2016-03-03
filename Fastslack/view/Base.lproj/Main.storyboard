@@ -66,7 +66,8 @@
                         <barButtonItem key="rightBarButtonItem" title="Done" id="dZc-Dp-9Tc"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="inputTextView" destination="Dem-tY-oi7" id="tb1-d4-eIt"/>
+                        <outlet property="doneButton" destination="dZc-Dp-9Tc" id="zSK-wn-MFq"/>
+                        <outlet property="textView" destination="Dem-tY-oi7" id="fyg-LK-7wO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

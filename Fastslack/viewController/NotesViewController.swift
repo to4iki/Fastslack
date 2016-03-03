@@ -10,6 +10,8 @@ import UIKit
 
 final class NotesViewController: UIViewController {
     
+    @IBOutlet private var tableView: UITableView!
+    
     private var closeCompletionHandler: (() -> Void)?
 }
 
