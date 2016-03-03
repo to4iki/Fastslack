@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E77309F1C84930B00C47C89 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E77309E1C84930B00C47C89 /* Notes.storyboard */; };
 		1E7730A11C84952900C47C89 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7730A01C84952900C47C89 /* NotesViewController.swift */; };
+		1E7C61E91C88A8CD00D8490A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C61E71C88A8CD00D8490A /* Realm.framework */; };
+		1E7C61EA1C88A8CD00D8490A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C61E81C88A8CD00D8490A /* RealmSwift.framework */; };
 		1EBE57D21C8578A20043C652 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBE57D11C8578A20043C652 /* XCGLogger.framework */; };
 		1EBE57D71C857E4F0043C652 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBE57D61C857E4F0043C652 /* Logger.swift */; };
 		1EF85E9D1C8342A10092A3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF85E9C1C8342A10092A3CF /* AppDelegate.swift */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		1E77309E1C84930B00C47C89 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		1E7730A01C84952900C47C89 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		1E7C61E71C88A8CD00D8490A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		1E7C61E81C88A8CD00D8490A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		1EBE57D11C8578A20043C652 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		1EBE57D61C857E4F0043C652 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1EF85E991C8342A00092A3CF /* Fastslack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fastslack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E7C61E91C88A8CD00D8490A /* Realm.framework in Frameworks */,
+				1E7C61EA1C88A8CD00D8490A /* RealmSwift.framework in Frameworks */,
 				1EBE57D21C8578A20043C652 /* XCGLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +140,8 @@
 		1EF85E901C8342A00092A3CF = {
 			isa = PBXGroup;
 			children = (
+				1E7C61E71C88A8CD00D8490A /* Realm.framework */,
+				1E7C61E81C88A8CD00D8490A /* RealmSwift.framework */,
 				1EBE57D11C8578A20043C652 /* XCGLogger.framework */,
 				1EF85E9B1C8342A00092A3CF /* Fastslack */,
 				1EF85EB01C8342A10092A3CF /* FastslackTests */,
@@ -324,6 +332,8 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/XCGLogger.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			outputPaths = (
 			);
