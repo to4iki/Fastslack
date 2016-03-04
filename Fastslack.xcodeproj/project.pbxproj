@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1E77309F1C84930B00C47C89 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E77309E1C84930B00C47C89 /* Notes.storyboard */; };
 		1E7730A11C84952900C47C89 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7730A01C84952900C47C89 /* NotesViewController.swift */; };
+		1E7861001C89FF6B00DED8D9 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7860FD1C89FF4E00DED8D9 /* RxCocoa.framework */; };
+		1E7861011C89FF7C00DED8D9 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7860FE1C89FF4E00DED8D9 /* RxSwift.framework */; };
+		1E7861021C89FF8800DED8D9 /* Slack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7860FF1C89FF4E00DED8D9 /* Slack.framework */; };
 		1E7C61E91C88A8CD00D8490A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C61E71C88A8CD00D8490A /* Realm.framework */; };
 		1E7C61EA1C88A8CD00D8490A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C61E81C88A8CD00D8490A /* RealmSwift.framework */; };
 		1EAAF85C1C89C4180095A4B7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAAF85B1C89C4180095A4B7 /* Note.swift */; };
@@ -47,6 +50,9 @@
 /* Begin PBXFileReference section */
 		1E77309E1C84930B00C47C89 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		1E7730A01C84952900C47C89 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		1E7860FD1C89FF4E00DED8D9 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		1E7860FE1C89FF4E00DED8D9 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		1E7860FF1C89FF4E00DED8D9 /* Slack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Slack.framework; path = Carthage/Build/iOS/Slack.framework; sourceTree = "<group>"; };
 		1E7C61E71C88A8CD00D8490A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		1E7C61E81C88A8CD00D8490A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		1EAAF85B1C89C4180095A4B7 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
@@ -76,6 +82,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E7861021C89FF8800DED8D9 /* Slack.framework in Frameworks */,
+				1E7861011C89FF7C00DED8D9 /* RxSwift.framework in Frameworks */,
+				1E7861001C89FF6B00DED8D9 /* RxCocoa.framework in Frameworks */,
 				1E7C61E91C88A8CD00D8490A /* Realm.framework in Frameworks */,
 				1E7C61EA1C88A8CD00D8490A /* RealmSwift.framework in Frameworks */,
 				1EBE57D21C8578A20043C652 /* XCGLogger.framework in Frameworks */,
@@ -179,6 +188,9 @@
 				1EF85E9A1C8342A00092A3CF /* Products */,
 				1E7C61E71C88A8CD00D8490A /* Realm.framework */,
 				1E7C61E81C88A8CD00D8490A /* RealmSwift.framework */,
+				1E7860FD1C89FF4E00DED8D9 /* RxCocoa.framework */,
+				1E7860FE1C89FF4E00DED8D9 /* RxSwift.framework */,
+				1E7860FF1C89FF4E00DED8D9 /* Slack.framework */,
 				1EBE57D11C8578A20043C652 /* XCGLogger.framework */,
 			);
 			sourceTree = "<group>";
@@ -367,6 +379,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/XCGLogger.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Slack.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 			);
 			outputPaths = (
 			);

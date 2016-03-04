@@ -1,2 +1,4 @@
+github "ReactiveX/RxSwift"
 github "realm/realm-cocoa"
+github "to4iki/Slack"
 github "DaveWoodCom/XCGLogger"

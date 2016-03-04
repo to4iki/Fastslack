@@ -1,2 +1,4 @@
+github "ReactiveX/RxSwift" "2.2.0"
+github "to4iki/Slack" "0.1.0"
 github "DaveWoodCom/XCGLogger" "Version_3.2"
 github "realm/realm-cocoa" "v0.98.3"
