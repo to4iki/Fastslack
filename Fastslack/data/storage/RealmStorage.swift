@@ -13,8 +13,8 @@ struct RealmStorage {
     
     private let realm: Realm
     
-    init(persistentType: Persistent = .InMemory) {
-        self.realm = persistentType.toRealm()
+    init(persistent: Persistent = .InMemory) {
+        self.realm = persistent.toRealm()
     }
 }
 
@@ -41,7 +41,7 @@ extension RealmStorage {
 
 extension RealmStorage {
     
-    func read(type: Object.Type) -> Results<Object> {
+    func read<A: Object>(type: A.Type) -> Results<A> {
         return realm.objects(type)
     }
     

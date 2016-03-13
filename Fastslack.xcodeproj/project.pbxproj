@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2FFFCE1C95B94100E4D52F /* SlackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FFFCD1C95B94100E4D52F /* SlackAPI.swift */; };
+		1E2FFFD01C95C58500E4D52F /* NoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FFFCF1C95C58500E4D52F /* NoteRepository.swift */; };
+		1E2FFFD21C95C75D00E4D52F /* RealmNoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FFFD11C95C75D00E4D52F /* RealmNoteRepository.swift */; };
 		1E77309F1C84930B00C47C89 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E77309E1C84930B00C47C89 /* Notes.storyboard */; };
 		1E7730A11C84952900C47C89 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7730A01C84952900C47C89 /* NotesViewController.swift */; };
 		1E7861001C89FF6B00DED8D9 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7860FD1C89FF4E00DED8D9 /* RxCocoa.framework */; };
@@ -48,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E2FFFCD1C95B94100E4D52F /* SlackAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackAPI.swift; sourceTree = "<group>"; };
+		1E2FFFCF1C95C58500E4D52F /* NoteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteRepository.swift; sourceTree = "<group>"; };
+		1E2FFFD11C95C75D00E4D52F /* RealmNoteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmNoteRepository.swift; sourceTree = "<group>"; };
 		1E77309E1C84930B00C47C89 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		1E7730A01C84952900C47C89 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		1E7860FD1C89FF4E00DED8D9 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -116,6 +122,14 @@
 			path = storage;
 			sourceTree = "<group>";
 		};
+		1EA660E91C91C0BF00821952 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				1E2FFFCD1C95B94100E4D52F /* SlackAPI.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
 		1EAAF85F1C89C6610095A4B7 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +142,8 @@
 		1EAAF8601C89C6640095A4B7 /* repository */ = {
 			isa = PBXGroup;
 			children = (
+				1E2FFFCF1C95C58500E4D52F /* NoteRepository.swift */,
+				1E2FFFD11C95C75D00E4D52F /* RealmNoteRepository.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -161,6 +177,7 @@
 		1ED7EED81C85767800CBE184 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				1EA660E91C91C0BF00821952 /* api */,
 				1E7C61ED1C88AA5B00D8490A /* storage */,
 				1EBE57D61C857E4F0043C652 /* Logger.swift */,
 			);
@@ -397,9 +414,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EFE26E51C872E0000D22F32 /* SettingViewController.swift in Sources */,
+				1E2FFFD21C95C75D00E4D52F /* RealmNoteRepository.swift in Sources */,
 				1EF85E9F1C8342A10092A3CF /* MainViewController.swift in Sources */,
 				1EAAF8641C89D9180095A4B7 /* RealmStorage.swift in Sources */,
 				1EF85E9D1C8342A10092A3CF /* AppDelegate.swift in Sources */,
+				1E2FFFCE1C95B94100E4D52F /* SlackAPI.swift in Sources */,
+				1E2FFFD01C95C58500E4D52F /* NoteRepository.swift in Sources */,
 				1EAAF8621C89C9770095A4B7 /* Entity.swift in Sources */,
 				1E7730A11C84952900C47C89 /* NotesViewController.swift in Sources */,
 				1EBE57D71C857E4F0043C652 /* Logger.swift in Sources */,
