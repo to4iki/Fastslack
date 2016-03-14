@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class MainViewController: UIViewController {
+    
+    private let disposeBag = DisposeBag()
     
     @IBOutlet private weak var textView: UITextView! {
         didSet {
@@ -21,7 +25,6 @@ final class MainViewController: UIViewController {
             doneButton.enabled = false
         }
     }
-    
 }
 
 // MARK: - UIViewController
@@ -30,6 +33,7 @@ extension MainViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindView()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -42,8 +46,28 @@ extension MainViewController {
 
 extension MainViewController {
     
+    private func bindView() {
+        textView.rx_text
+            .map({ !$0.isEmpty })
+            .bindTo(doneButton.rx_enabled)
+            .addDisposableTo(disposeBag)
+        
+        doneButton.rx_tap
+            .subscribeNext({ [unowned self] _ in
+                guard let text = self.textView.text else { return }
+                log.info(text)
+                self.clearText()
+            })
+            .addDisposableTo(disposeBag)
+    }
+    
+    
     private func autoFocus() {
         textView.becomeFirstResponder()
+    }
+    
+    private func clearText() {
+        textView.text = ""
     }
 }
 
