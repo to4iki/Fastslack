@@ -122,6 +122,16 @@
 			path = storage;
 			sourceTree = "<group>";
 		};
+		1E7EF90C1C97035C004F7DED /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1ED7EED91C85768600CBE184 /* view */,
+				1ED7EED51C85763B00CBE184 /* viewController */,
+				1ED7EED61C85765100CBE184 /* viewModel */,
+			);
+			path = presentation;
+			sourceTree = "<group>";
+		};
 		1EA660E91C91C0BF00821952 /* api */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,9 +237,7 @@
 			children = (
 				1ED7EED81C85767800CBE184 /* data */,
 				1ED7EED71C85765800CBE184 /* domain */,
-				1ED7EED91C85768600CBE184 /* view */,
-				1ED7EED51C85763B00CBE184 /* viewController */,
-				1ED7EED61C85765100CBE184 /* viewModel */,
+				1E7EF90C1C97035C004F7DED /* presentation */,
 				1EF85E9C1C8342A10092A3CF /* AppDelegate.swift */,
 				1EF85EA81C8342A10092A3CF /* Info.plist */,
 			);
