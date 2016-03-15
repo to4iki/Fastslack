@@ -1,5 +1,5 @@
 //
-//  CreateNoteUseCase.swift
+//  EntryNoteUseCase.swift
 //  Fastslack
 //
 //  Created by to4iki on 3/15/16.
@@ -8,21 +8,23 @@
 
 import Foundation
 
-protocol CreateNoteUseCaseDelegate: class {
+protocol EntryNoteUseCaseDelegate: class {
     
     func onSaveNoteSuccess()
     
     func onSaveNoteError()
 }
 
-final class CreateNoteUseCase: NSObject {
+final class EntryNoteUseCase: NSObject {
     
-    weak var delegate: CreateNoteUseCaseDelegate?
+    weak var delegate: EntryNoteUseCaseDelegate?
     
     private lazy var realmNoteRepository = RealmNoteRepository()
 }
 
-extension CreateNoteUseCase {
+// MARK: - Action
+
+extension EntryNoteUseCase {
     
     func create(text: String) -> Note {
         let note = Note()

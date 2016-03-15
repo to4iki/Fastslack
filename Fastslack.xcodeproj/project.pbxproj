@@ -17,6 +17,10 @@
 		1E7861021C89FF8800DED8D9 /* Slack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7860FF1C89FF4E00DED8D9 /* Slack.framework */; };
 		1E7C61E91C88A8CD00D8490A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C61E71C88A8CD00D8490A /* Realm.framework */; };
 		1E7C61EA1C88A8CD00D8490A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C61E81C88A8CD00D8490A /* RealmSwift.framework */; };
+		1EA5EFD81C983CBB001A6C8E /* SendNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5EFD71C983CBB001A6C8E /* SendNoteUseCase.swift */; };
+		1EA5EFDA1C984646001A6C8E /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5EFD91C984646001A6C8E /* Presenter.swift */; };
+		1EA5EFDC1C98471E001A6C8E /* NotePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5EFDB1C98471E001A6C8E /* NotePresenter.swift */; };
+		1EA5EFDE1C984890001A6C8E /* EntryNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5EFDD1C984890001A6C8E /* EntryNoteUseCase.swift */; };
 		1EAAF85C1C89C4180095A4B7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAAF85B1C89C4180095A4B7 /* Note.swift */; };
 		1EAAF8621C89C9770095A4B7 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAAF8611C89C9770095A4B7 /* Entity.swift */; };
 		1EAAF8641C89D9180095A4B7 /* RealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAAF8631C89D9180095A4B7 /* RealmStorage.swift */; };
@@ -61,6 +65,10 @@
 		1E7860FF1C89FF4E00DED8D9 /* Slack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Slack.framework; path = Carthage/Build/iOS/Slack.framework; sourceTree = "<group>"; };
 		1E7C61E71C88A8CD00D8490A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		1E7C61E81C88A8CD00D8490A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		1EA5EFD71C983CBB001A6C8E /* SendNoteUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendNoteUseCase.swift; sourceTree = "<group>"; };
+		1EA5EFD91C984646001A6C8E /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		1EA5EFDB1C98471E001A6C8E /* NotePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotePresenter.swift; sourceTree = "<group>"; };
+		1EA5EFDD1C984890001A6C8E /* EntryNoteUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryNoteUseCase.swift; sourceTree = "<group>"; };
 		1EAAF85B1C89C4180095A4B7 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		1EAAF8611C89C9770095A4B7 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		1EAAF8631C89D9180095A4B7 /* RealmStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmStorage.swift; sourceTree = "<group>"; };
@@ -125,11 +133,20 @@
 		1E7EF90C1C97035C004F7DED /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1ED7EED61C85765100CBE184 /* presenter */,
 				1ED7EED91C85768600CBE184 /* view */,
 				1ED7EED51C85763B00CBE184 /* viewController */,
-				1ED7EED61C85765100CBE184 /* viewModel */,
 			);
 			path = presentation;
+			sourceTree = "<group>";
+		};
+		1EA5EFD61C983C6E001A6C8E /* usecase */ = {
+			isa = PBXGroup;
+			children = (
+				1EA5EFDD1C984890001A6C8E /* EntryNoteUseCase.swift */,
+				1EA5EFD71C983CBB001A6C8E /* SendNoteUseCase.swift */,
+			);
+			path = usecase;
 			sourceTree = "<group>";
 		};
 		1EA660E91C91C0BF00821952 /* api */ = {
@@ -168,11 +185,13 @@
 			path = viewController;
 			sourceTree = "<group>";
 		};
-		1ED7EED61C85765100CBE184 /* viewModel */ = {
+		1ED7EED61C85765100CBE184 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				1EA5EFDB1C98471E001A6C8E /* NotePresenter.swift */,
+				1EA5EFD91C984646001A6C8E /* Presenter.swift */,
 			);
-			path = viewModel;
+			path = presenter;
 			sourceTree = "<group>";
 		};
 		1ED7EED71C85765800CBE184 /* domain */ = {
@@ -180,6 +199,7 @@
 			children = (
 				1EAAF85F1C89C6610095A4B7 /* model */,
 				1EAAF8601C89C6640095A4B7 /* repository */,
+				1EA5EFD61C983C6E001A6C8E /* usecase */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -422,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EFE26E51C872E0000D22F32 /* SettingViewController.swift in Sources */,
+				1EA5EFD81C983CBB001A6C8E /* SendNoteUseCase.swift in Sources */,
 				1E2FFFD21C95C75D00E4D52F /* RealmNoteRepository.swift in Sources */,
 				1EF85E9F1C8342A10092A3CF /* MainViewController.swift in Sources */,
 				1EAAF8641C89D9180095A4B7 /* RealmStorage.swift in Sources */,
@@ -430,7 +451,10 @@
 				1E2FFFD01C95C58500E4D52F /* NoteRepository.swift in Sources */,
 				1EAAF8621C89C9770095A4B7 /* Entity.swift in Sources */,
 				1E7730A11C84952900C47C89 /* NotesViewController.swift in Sources */,
+				1EA5EFDE1C984890001A6C8E /* EntryNoteUseCase.swift in Sources */,
+				1EA5EFDA1C984646001A6C8E /* Presenter.swift in Sources */,
 				1EBE57D71C857E4F0043C652 /* Logger.swift in Sources */,
+				1EA5EFDC1C98471E001A6C8E /* NotePresenter.swift in Sources */,
 				1EAAF85C1C89C4180095A4B7 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

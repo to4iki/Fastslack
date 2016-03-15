@@ -12,6 +12,8 @@ import RxCocoa
 
 final class MainViewController: UIViewController {
     
+    private let presenter = NotePresenter()
+    
     private let disposeBag = DisposeBag()
     
     @IBOutlet private weak var textView: UITextView! {
@@ -33,11 +35,14 @@ extension MainViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter.viewDidLoad()
         bindView()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
         autoFocus()
     }
 }
@@ -55,7 +60,7 @@ extension MainViewController {
         doneButton.rx_tap
             .subscribeNext({ [unowned self] _ in
                 guard let text = self.textView.text else { return }
-                log.info(text)
+                self.presenter.send(text)
                 self.clearText()
             })
             .addDisposableTo(disposeBag)
