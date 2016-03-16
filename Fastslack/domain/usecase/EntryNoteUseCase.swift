@@ -19,7 +19,7 @@ final class EntryNoteUseCase: NSObject {
     
     weak var delegate: EntryNoteUseCaseDelegate?
     
-    private lazy var realmNoteRepository = RealmNoteRepository()
+    private lazy var repository = RealmNoteRepository()
 }
 
 // MARK: - Action
@@ -28,6 +28,7 @@ extension EntryNoteUseCase {
     
     func create(text: String) -> Note {
         let note = Note()
+        note.id = repository.autoIncrementId()
         note.body = text
         
         return note
@@ -35,7 +36,7 @@ extension EntryNoteUseCase {
     
     func save(note: Note) {
         do {
-            try realmNoteRepository.entry(note)
+            try repository.entry(note)
             delegate?.onSaveNoteSuccess()
         } catch {
             delegate?.onSaveNoteError()

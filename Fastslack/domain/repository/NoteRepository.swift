@@ -11,7 +11,7 @@ import RealmSwift
 
 protocol NoteRepository {
     
-    func findAll() -> Results<Note>
+    func findAll() -> [Note]
     
     func entry(note: Note) throws
     

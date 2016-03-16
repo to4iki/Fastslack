@@ -1,5 +1,5 @@
 //
-//  NotePresenter.swift
+//  EntryNotePresenter.swift
 //  Fastslack
 //
 //  Created by to4iki on 3/15/16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class NotePresenter {
+final class EntryNotePresenter {
     
     private let entryUseCase = EntryNoteUseCase()
     
@@ -22,7 +22,7 @@ final class NotePresenter {
 
 // MARK: - Presenter
 
-extension NotePresenter: Presenter {
+extension EntryNotePresenter: Presenter {
     
     func viewDidLoad() {
         entryUseCase.delegate = self
@@ -32,7 +32,7 @@ extension NotePresenter: Presenter {
 
 // MARK: - EntryNoteUseCaseDelegate
 
-extension NotePresenter: EntryNoteUseCaseDelegate {
+extension EntryNotePresenter: EntryNoteUseCaseDelegate {
     
     func onSaveNoteSuccess() {
         log.info("save note success.")
@@ -45,7 +45,7 @@ extension NotePresenter: EntryNoteUseCaseDelegate {
 
 // MARK: - SendNoteUseCaseDelegate
 
-extension NotePresenter: SendNoteUseCaseDelegate {
+extension EntryNotePresenter: SendNoteUseCaseDelegate {
     
     func onSendNoteSuccess(message: String, note: Note) {
         log.info(message)

@@ -19,6 +19,7 @@ struct SlackAPI {
             self.client.sendSimpleMessage(message) { (data, error) -> Void in
                 if let data = data, str = NSString(data: data, encoding: NSUTF8StringEncoding) as? String {
                     observer.onNext(str)
+                    observer.onCompleted()
                 }
                 
                 if let error = error {

@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-struct RealmNoteRepository: NoteRepository {
+struct RealmNoteRepository {
     
     private let storage: RealmStorage
     
@@ -18,10 +18,12 @@ struct RealmNoteRepository: NoteRepository {
     }
 }
 
-extension RealmNoteRepository {
+// MARK: - NoteRepository
+
+extension RealmNoteRepository: NoteRepository {
     
-    func findAll() -> Results<Note> {
-        return storage.read(Note)
+    func findAll() -> [Note] {
+        return storage.read(Note).reduce([], combine: { $0 + [$1] })
     }
     
     func entry(note: Note) throws {
@@ -30,5 +32,12 @@ extension RealmNoteRepository {
     
     func delete(note: Note) throws {
         try storage.delete(note)
+    }
+}
+
+extension RealmNoteRepository {
+    
+    func autoIncrementId() -> Int {
+        return (storage.read(Note).last?.id ?? 0) + 1
     }
 }
