@@ -12,10 +12,6 @@ import RxCocoa
 
 final class MainViewController: UIViewController {
     
-    private let presenter = NotePresenter()
-    
-    private let disposeBag = DisposeBag()
-    
     @IBOutlet private weak var textView: UITextView! {
         didSet {
             automaticallyAdjustsScrollViewInsets = false
@@ -27,6 +23,10 @@ final class MainViewController: UIViewController {
             doneButton.enabled = false
         }
     }
+    
+    private let presenter = EntryNotePresenter()
+    
+    private let disposeBag = DisposeBag()
 }
 
 // MARK: - UIViewController
@@ -81,8 +81,8 @@ extension MainViewController {
 extension MainViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        guard let toViewController = segue.destinationViewController.childViewControllers.first as? NotesViewController
-            where segue.identifier == "NotesSegue" else { fatalError() }
+        guard let toViewController = segue.destinationViewController.childViewControllers.first as? NoteListViewController
+            where segue.identifier == "NoteListSegue" else { fatalError() }
         
         toViewController.setCloseCompletionHandler({
             log.info("close notes view controller")

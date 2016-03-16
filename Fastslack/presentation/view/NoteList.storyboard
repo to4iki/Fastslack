@@ -24,7 +24,7 @@
         <!--Archive-->
         <scene sceneID="YwK-R8-MFv">
             <objects>
-                <viewController id="1Er-0d-neu" customClass="NotesViewController" customModule="Fastslack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1Er-0d-neu" customClass="NoteListViewController" customModule="Fastslack" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DOi-ju-AHe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

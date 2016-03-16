@@ -1,5 +1,5 @@
 //
-//  NotesViewController.swift
+//  NoteListViewController.swift
 //  Fastslack
 //
 //  Created by to4iki on 3/1/16.
@@ -8,25 +8,29 @@
 
 import UIKit
 
-final class NotesViewController: UIViewController {
+final class NoteListViewController: UIViewController {
     
     @IBOutlet private var tableView: UITableView!
+    
+    private let presenter = NoteListPresenter()
     
     private var closeCompletionHandler: (() -> Void)?
 }
 
 // MARK: - UIViewController
 
-extension NotesViewController {
+extension NoteListViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter.viewDidLoad()
     }
 }
 
 // MARK: - Setup
 
-extension NotesViewController {
+extension NoteListViewController {
     
     func setCloseCompletionHandler(handler: () -> Void) {
         closeCompletionHandler = handler
@@ -35,7 +39,7 @@ extension NotesViewController {
 
 // MARK: - Action
 
-extension NotesViewController {
+extension NoteListViewController {
     
     @IBAction func onClickCloseButton(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: closeCompletionHandler)

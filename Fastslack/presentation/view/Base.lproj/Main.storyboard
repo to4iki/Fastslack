@@ -60,7 +60,7 @@
                     <navigationItem key="navigationItem" title="New Note" id="3lB-2X-wIG">
                         <barButtonItem key="leftBarButtonItem" title="Notes" id="fnO-b6-NHc">
                             <connections>
-                                <segue destination="qod-cV-33S" kind="presentation" identifier="NotesSegue" id="8Ls-0z-NtM"/>
+                                <segue destination="qod-cV-33S" kind="presentation" identifier="NoteListSegue" id="8Ls-0z-NtM"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="dZc-Dp-9Tc"/>
@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="337" y="355"/>
         </scene>
-        <!--Notes-->
+        <!--NoteList-->
         <scene sceneID="fom-fr-NkZ">
             <objects>
-                <viewControllerPlaceholder storyboardName="Notes" id="qod-cV-33S" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="NoteList" id="qod-cV-33S" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1f9-NX-xiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="337.5" y="784"/>
