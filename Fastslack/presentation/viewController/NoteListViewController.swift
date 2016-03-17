@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class NoteListViewController: UIViewController {
     
     @IBOutlet private var tableView: UITableView!
     
     private let presenter = NoteListPresenter()
+    
+    private let disposeBag = DisposeBag()
     
     private var closeCompletionHandler: (() -> Void)?
 }
@@ -25,10 +29,44 @@ extension NoteListViewController {
         super.viewDidLoad()
         
         presenter.viewDidLoad()
+        
+        setupView()
+        bindView()
     }
 }
 
-// MARK: - Setup
+// MARK: - UI
+
+extension NoteListViewController {
+    
+    private func setupView() {
+        func configureDynamicCellSizing() {
+            tableView.estimatedRowHeight = 44
+            tableView.rowHeight = UITableViewAutomaticDimension
+        }
+        
+        func hideSeparator() {
+            let view = UIView(frame: CGRect.zero)
+            view.backgroundColor = UIColor.clearColor()
+            tableView.tableHeaderView = view
+            tableView.tableFooterView = view
+        }
+        
+        tableView.registerNib(NoteTableViewCell.nib(), forCellReuseIdentifier: NoteTableViewCell.CellIdentifier)
+        configureDynamicCellSizing()
+        hideSeparator()
+    }
+    
+    private func bindView() {
+        presenter.variable.asObservable()
+            .bindTo(tableView.rx_itemsWithCellIdentifier(NoteTableViewCell.CellIdentifier, cellType: NoteTableViewCell.self)) { (row, element, cell) -> Void in
+                cell.bind(element)
+            }
+            .addDisposableTo(disposeBag)
+    }
+}
+
+// MARK: - Setter
 
 extension NoteListViewController {
     

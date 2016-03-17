@@ -18,7 +18,7 @@ final class MainViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var doneButton: UIBarButtonItem! {
+    @IBOutlet private weak var doneButton: UIBarButtonItem! {
         didSet {
             doneButton.enabled = false
         }

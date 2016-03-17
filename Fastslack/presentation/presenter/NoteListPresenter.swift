@@ -14,6 +14,8 @@ final class NoteListPresenter {
     private let disposeBag = DisposeBag()
     
     private let usecase = FetchNoteListUseCase()
+    
+    private(set) var variable = Variable<[Note]>([])
 }
 
 // MARK: - Presenter
@@ -22,7 +24,7 @@ extension NoteListPresenter: Presenter {
     
     func viewDidLoad() {
         usecase.fetch().subscribeNext { (note: Note) -> Void in
-            log.info(note.description)
+            self.variable.value.append(note)
         }.addDisposableTo(disposeBag)
     }
 }
