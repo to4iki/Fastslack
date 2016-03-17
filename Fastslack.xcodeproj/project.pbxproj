@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0B119A1C99B85D007BBE25 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E0B11991C99B85D007BBE25 /* RxBlocking.framework */; };
+		1E2ACC901C9AE4E200341B75 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2ACC8E1C9AE4E200341B75 /* NoteTableViewCell.swift */; };
+		1E2ACC911C9AE4E200341B75 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2ACC8F1C9AE4E200341B75 /* NoteTableViewCell.xib */; };
 		1E2FFFCE1C95B94100E4D52F /* SlackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FFFCD1C95B94100E4D52F /* SlackAPI.swift */; };
 		1E2FFFD01C95C58500E4D52F /* NoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FFFCF1C95C58500E4D52F /* NoteRepository.swift */; };
 		1E2FFFD21C95C75D00E4D52F /* RealmNoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FFFD11C95C75D00E4D52F /* RealmNoteRepository.swift */; };
+		1E5323891C9AEF0800E0693C /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5323881C9AEF0800E0693C /* DateFormatter.swift */; };
 		1E77309F1C84930B00C47C89 /* NoteList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E77309E1C84930B00C47C89 /* NoteList.storyboard */; };
 		1E7730A11C84952900C47C89 /* NoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7730A01C84952900C47C89 /* NoteListViewController.swift */; };
 		1E7861001C89FF6B00DED8D9 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7860FD1C89FF4E00DED8D9 /* RxCocoa.framework */; };
@@ -57,9 +61,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E0B11991C99B85D007BBE25 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		1E2ACC8E1C9AE4E200341B75 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		1E2ACC8F1C9AE4E200341B75 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
 		1E2FFFCD1C95B94100E4D52F /* SlackAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackAPI.swift; sourceTree = "<group>"; };
 		1E2FFFCF1C95C58500E4D52F /* NoteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteRepository.swift; sourceTree = "<group>"; };
 		1E2FFFD11C95C75D00E4D52F /* RealmNoteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmNoteRepository.swift; sourceTree = "<group>"; };
+		1E5323881C9AEF0800E0693C /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		1E77309E1C84930B00C47C89 /* NoteList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NoteList.storyboard; sourceTree = "<group>"; };
 		1E7730A01C84952900C47C89 /* NoteListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteListViewController.swift; sourceTree = "<group>"; };
 		1E7860FD1C89FF4E00DED8D9 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -101,6 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E7861021C89FF8800DED8D9 /* Slack.framework in Frameworks */,
+				1E0B119A1C99B85D007BBE25 /* RxBlocking.framework in Frameworks */,
 				1E7861011C89FF7C00DED8D9 /* RxSwift.framework in Frameworks */,
 				1E7861001C89FF6B00DED8D9 /* RxCocoa.framework in Frameworks */,
 				1E7C61E91C88A8CD00D8490A /* Realm.framework in Frameworks */,
@@ -126,6 +135,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E53238A1C9AF38A00E0693C /* util */ = {
+			isa = PBXGroup;
+			children = (
+				1E5323881C9AEF0800E0693C /* DateFormatter.swift */,
+				1EBE57D61C857E4F0043C652 /* Logger.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		1E7C61ED1C88AA5B00D8490A /* storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,7 +233,7 @@
 				1EA660E91C91C0BF00821952 /* api */,
 				1EDB4FD61C99AFD300E5A88F /* repository */,
 				1E7C61ED1C88AA5B00D8490A /* storage */,
-				1EBE57D61C857E4F0043C652 /* Logger.swift */,
+				1E53238A1C9AF38A00E0693C /* util */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -227,6 +245,8 @@
 				1EF85EA51C8342A10092A3CF /* LaunchScreen.storyboard */,
 				1EF85EA01C8342A10092A3CF /* Main.storyboard */,
 				1E77309E1C84930B00C47C89 /* NoteList.storyboard */,
+				1E2ACC8E1C9AE4E200341B75 /* NoteTableViewCell.swift */,
+				1E2ACC8F1C9AE4E200341B75 /* NoteTableViewCell.xib */,
 				1EFE26E81C87339700D22F32 /* Setting.storyboard */,
 			);
 			path = view;
@@ -249,6 +269,7 @@
 				1EF85E9A1C8342A00092A3CF /* Products */,
 				1E7C61E71C88A8CD00D8490A /* Realm.framework */,
 				1E7C61E81C88A8CD00D8490A /* RealmSwift.framework */,
+				1E0B11991C99B85D007BBE25 /* RxBlocking.framework */,
 				1E7860FD1C89FF4E00DED8D9 /* RxCocoa.framework */,
 				1E7860FE1C89FF4E00DED8D9 /* RxSwift.framework */,
 				1E7860FF1C89FF4E00DED8D9 /* Slack.framework */,
@@ -407,6 +428,7 @@
 				1E77309F1C84930B00C47C89 /* NoteList.storyboard in Resources */,
 				1EF85EA71C8342A10092A3CF /* LaunchScreen.storyboard in Resources */,
 				1EFE26E91C87339700D22F32 /* Setting.storyboard in Resources */,
+				1E2ACC911C9AE4E200341B75 /* NoteTableViewCell.xib in Resources */,
 				1EF85EA41C8342A10092A3CF /* Assets.xcassets in Resources */,
 				1EF85EA21C8342A10092A3CF /* Main.storyboard in Resources */,
 			);
@@ -441,6 +463,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Slack.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 			);
 			outputPaths = (
 			);
@@ -460,6 +483,8 @@
 				1EDB4FD51C99A68200E5A88F /* NoteListPresenter.swift in Sources */,
 				1E2FFFD21C95C75D00E4D52F /* RealmNoteRepository.swift in Sources */,
 				1EF85E9F1C8342A10092A3CF /* MainViewController.swift in Sources */,
+				1E5323891C9AEF0800E0693C /* DateFormatter.swift in Sources */,
+				1E2ACC901C9AE4E200341B75 /* NoteTableViewCell.swift in Sources */,
 				1EAAF8641C89D9180095A4B7 /* RealmStorage.swift in Sources */,
 				1EF85E9D1C8342A10092A3CF /* AppDelegate.swift in Sources */,
 				1E2FFFCE1C95B94100E4D52F /* SlackAPI.swift in Sources */,
