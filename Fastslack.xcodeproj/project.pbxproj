@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E0B119A1C99B85D007BBE25 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E0B11991C99B85D007BBE25 /* RxBlocking.framework */; };
+		1E1C441E1C9C28FD00DEC2A0 /* ErrorBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C441D1C9C28FD00DEC2A0 /* ErrorBundle.swift */; };
 		1E2ACC901C9AE4E200341B75 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2ACC8E1C9AE4E200341B75 /* NoteTableViewCell.swift */; };
 		1E2ACC911C9AE4E200341B75 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2ACC8F1C9AE4E200341B75 /* NoteTableViewCell.xib */; };
 		1E2FFFCE1C95B94100E4D52F /* SlackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FFFCD1C95B94100E4D52F /* SlackAPI.swift */; };
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		1E0B11991C99B85D007BBE25 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		1E1C441D1C9C28FD00DEC2A0 /* ErrorBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorBundle.swift; sourceTree = "<group>"; };
 		1E2ACC8E1C9AE4E200341B75 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		1E2ACC8F1C9AE4E200341B75 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
 		1E2FFFCD1C95B94100E4D52F /* SlackAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackAPI.swift; sourceTree = "<group>"; };
@@ -137,6 +139,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E1C441C1C9C28C100DEC2A0 /* error */ = {
+			isa = PBXGroup;
+			children = (
+				1E1C441D1C9C28FD00DEC2A0 /* ErrorBundle.swift */,
+			);
+			path = error;
+			sourceTree = "<group>";
+		};
 		1E53238A1C9AF38A00E0693C /* util */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +233,7 @@
 		1ED7EED71C85765800CBE184 /* domain */ = {
 			isa = PBXGroup;
 			children = (
+				1E1C441C1C9C28C100DEC2A0 /* error */,
 				1EAAF85F1C89C6610095A4B7 /* model */,
 				1EAAF8601C89C6640095A4B7 /* repository */,
 				1EA5EFD61C983C6E001A6C8E /* usecase */,
@@ -499,6 +510,7 @@
 				1EA5EFDA1C984646001A6C8E /* Presenter.swift in Sources */,
 				1EBE57D71C857E4F0043C652 /* Logger.swift in Sources */,
 				1EA5EFDC1C98471E001A6C8E /* EntryNotePresenter.swift in Sources */,
+				1E1C441E1C9C28FD00DEC2A0 /* ErrorBundle.swift in Sources */,
 				1EDB4FD11C999FE400E5A88F /* FetchNoteUseCase.swift in Sources */,
 				1EAAF85C1C89C4180095A4B7 /* Note.swift in Sources */,
 			);

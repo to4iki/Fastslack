@@ -26,7 +26,7 @@ extension RealmNoteRepository: NoteRepository {
         return storage.read(Note).reduce([], combine: { $0 + [$1] })
     }
     
-    func entry(note: Note) throws {
+    func store(note: Note) throws {
         try storage.add(note)
     }
     
@@ -34,6 +34,8 @@ extension RealmNoteRepository: NoteRepository {
         try storage.delete(note)
     }
 }
+
+// MARK: - Support
 
 extension RealmNoteRepository {
     

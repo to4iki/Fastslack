@@ -9,11 +9,12 @@
 import Foundation
 import RealmSwift
 
+/// I/F
 protocol NoteRepository {
     
     func findAll() -> [Note]
     
-    func entry(note: Note) throws
+    func store(note: Note) throws
     
     func delete(note: Note) throws
 }

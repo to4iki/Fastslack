@@ -7,17 +7,9 @@
 //
 
 import Foundation
-
-protocol EntryNoteUseCaseDelegate: class {
-    
-    func onSaveNoteSuccess()
-    
-    func onSaveNoteError()
-}
+import RxSwift
 
 final class EntryNoteUseCase: NSObject {
-    
-    weak var delegate: EntryNoteUseCaseDelegate?
     
     private lazy var repository = RealmNoteRepository()
 }
@@ -34,12 +26,18 @@ extension EntryNoteUseCase {
         return note
     }
     
-    func save(note: Note) {
-        do {
-            try repository.entry(note)
-            delegate?.onSaveNoteSuccess()
-        } catch {
-            delegate?.onSaveNoteError()
+    func entry(note: Note) -> Observable<Note> {
+        return Observable.create { observer in
+            do {
+                try self.repository.store(note)
+                observer.onNext(note)
+            } catch {
+                observer.onError(ErrorBundle.StoreError(message: "entry note failure."))
+            }
+            
+            observer.onCompleted()
+            
+            return NopDisposable.instance
         }
     }
 }
