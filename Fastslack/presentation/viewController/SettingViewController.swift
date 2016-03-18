@@ -9,8 +9,6 @@
 import UIKit
 
 final class SettingViewController: UIViewController {
-    
-    private var closeCompletionHandler: (() -> Void)?
 }
 
 // MARK: - UIViewController
@@ -25,8 +23,4 @@ extension SettingViewController {
 // MARK: - Action
 
 extension SettingViewController {
-    
-    @IBAction func onClickCloseButton(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: closeCompletionHandler)
-    }
 }

@@ -36,6 +36,11 @@
                                 <action selector="onClickCloseButton:" destination="1Er-0d-neu" id="dUC-mt-FIq"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="ZYv-02-5fb">
+                            <connections>
+                                <segue destination="FYc-We-taa" kind="push" id="x3b-wn-0aN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="DOi-ju-AHe" id="sHl-KK-fVC"/>
@@ -44,6 +49,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLH-oe-MbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="390" y="386"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="nNu-7h-MEZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Setting" id="FYc-We-taa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eQd-ac-aCM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W2k-Kv-W5W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845" y="386"/>
         </scene>
     </scenes>
 </document>
