@@ -63,6 +63,12 @@ extension NoteListViewController {
                 cell.bind(element)
             }
             .addDisposableTo(disposeBag)
+        
+        tableView.rx_itemDeleted
+            .subscribeNext { [unowned self] indexPath in
+                self.presenter.deleteNoteBy(indexPath.row)
+            }
+            .addDisposableTo(disposeBag)
     }
 }
 
