@@ -1,5 +1,5 @@
 //
-//  FetchNoteListUseCase.swift
+//  FetchNoteUseCase.swift
 //  Fastslack
 //
 //  Created by to4iki on 3/16/16.
@@ -8,16 +8,15 @@
 
 import Foundation
 import RxSwift
-import RealmSwift
 
-final class FetchNoteListUseCase {
+final class FetchNoteUseCase {
     
     private lazy var repository = RealmNoteRepository()
 }
 
-extension FetchNoteListUseCase {
+extension FetchNoteUseCase {
     
-    func fetch() -> Observable<Note> {
+    func fetchAll() -> Observable<Note> {
         return repository.findAll().toObservable()
     }
 }

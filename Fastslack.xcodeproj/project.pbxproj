@@ -30,7 +30,7 @@
 		1EAAF8641C89D9180095A4B7 /* RealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAAF8631C89D9180095A4B7 /* RealmStorage.swift */; };
 		1EBE57D21C8578A20043C652 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBE57D11C8578A20043C652 /* XCGLogger.framework */; };
 		1EBE57D71C857E4F0043C652 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBE57D61C857E4F0043C652 /* Logger.swift */; };
-		1EDB4FD11C999FE400E5A88F /* FetchNoteListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB4FD01C999FE400E5A88F /* FetchNoteListUseCase.swift */; };
+		1EDB4FD11C999FE400E5A88F /* FetchNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB4FD01C999FE400E5A88F /* FetchNoteUseCase.swift */; };
 		1EDB4FD51C99A68200E5A88F /* NoteListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB4FD41C99A68200E5A88F /* NoteListPresenter.swift */; };
 		1EF85E9D1C8342A10092A3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF85E9C1C8342A10092A3CF /* AppDelegate.swift */; };
 		1EF85E9F1C8342A10092A3CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF85E9E1C8342A10092A3CF /* MainViewController.swift */; };
@@ -84,7 +84,7 @@
 		1EAAF8631C89D9180095A4B7 /* RealmStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmStorage.swift; sourceTree = "<group>"; };
 		1EBE57D11C8578A20043C652 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		1EBE57D61C857E4F0043C652 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		1EDB4FD01C999FE400E5A88F /* FetchNoteListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchNoteListUseCase.swift; sourceTree = "<group>"; };
+		1EDB4FD01C999FE400E5A88F /* FetchNoteUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchNoteUseCase.swift; sourceTree = "<group>"; };
 		1EDB4FD41C99A68200E5A88F /* NoteListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteListPresenter.swift; sourceTree = "<group>"; };
 		1EF85E991C8342A00092A3CF /* Fastslack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fastslack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF85E9C1C8342A10092A3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				1EA5EFDD1C984890001A6C8E /* EntryNoteUseCase.swift */,
-				1EDB4FD01C999FE400E5A88F /* FetchNoteListUseCase.swift */,
+				1EDB4FD01C999FE400E5A88F /* FetchNoteUseCase.swift */,
 				1EA5EFD71C983CBB001A6C8E /* SendNoteUseCase.swift */,
 			);
 			path = usecase;
@@ -495,7 +495,7 @@
 				1EA5EFDA1C984646001A6C8E /* Presenter.swift in Sources */,
 				1EBE57D71C857E4F0043C652 /* Logger.swift in Sources */,
 				1EA5EFDC1C98471E001A6C8E /* EntryNotePresenter.swift in Sources */,
-				1EDB4FD11C999FE400E5A88F /* FetchNoteListUseCase.swift in Sources */,
+				1EDB4FD11C999FE400E5A88F /* FetchNoteUseCase.swift in Sources */,
 				1EAAF85C1C89C4180095A4B7 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
