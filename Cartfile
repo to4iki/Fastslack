@@ -1,4 +1,6 @@
 github "ReactiveX/RxSwift"
 github "realm/realm-cocoa"
+github "kishikawakatsumi/KeychainAccess"
+github "radex/SwiftyUserDefaults"
 github "to4iki/Slack"
 github "DaveWoodCom/XCGLogger"

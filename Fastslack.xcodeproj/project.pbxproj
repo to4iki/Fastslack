@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1E0B119A1C99B85D007BBE25 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E0B11991C99B85D007BBE25 /* RxBlocking.framework */; };
+		1E1A67671C9C62A300A96E9C /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1A67661C9C62A300A96E9C /* KeychainAccess.framework */; };
+		1E1A67691C9C62D100A96E9C /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1A67681C9C62D100A96E9C /* SwiftyUserDefaults.framework */; };
 		1E1C441E1C9C28FD00DEC2A0 /* ErrorBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C441D1C9C28FD00DEC2A0 /* ErrorBundle.swift */; };
 		1E2ACC901C9AE4E200341B75 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2ACC8E1C9AE4E200341B75 /* NoteTableViewCell.swift */; };
 		1E2ACC911C9AE4E200341B75 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2ACC8F1C9AE4E200341B75 /* NoteTableViewCell.xib */; };
@@ -63,6 +65,8 @@
 
 /* Begin PBXFileReference section */
 		1E0B11991C99B85D007BBE25 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		1E1A67661C9C62A300A96E9C /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		1E1A67681C9C62D100A96E9C /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
 		1E1C441D1C9C28FD00DEC2A0 /* ErrorBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorBundle.swift; sourceTree = "<group>"; };
 		1E2ACC8E1C9AE4E200341B75 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		1E2ACC8F1C9AE4E200341B75 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E1A67691C9C62D100A96E9C /* SwiftyUserDefaults.framework in Frameworks */,
+				1E1A67671C9C62A300A96E9C /* KeychainAccess.framework in Frameworks */,
 				1E7861021C89FF8800DED8D9 /* Slack.framework in Frameworks */,
 				1E0B119A1C99B85D007BBE25 /* RxBlocking.framework in Frameworks */,
 				1E7861011C89FF7C00DED8D9 /* RxSwift.framework in Frameworks */,
@@ -270,12 +276,14 @@
 				1EF85EB01C8342A10092A3CF /* FastslackTests */,
 				1EF85EBB1C8342A10092A3CF /* FastslackUITests */,
 				1EF85E9A1C8342A00092A3CF /* Products */,
+				1E1A67661C9C62A300A96E9C /* KeychainAccess.framework */,
 				1E7C61E71C88A8CD00D8490A /* Realm.framework */,
 				1E7C61E81C88A8CD00D8490A /* RealmSwift.framework */,
 				1E0B11991C99B85D007BBE25 /* RxBlocking.framework */,
 				1E7860FD1C89FF4E00DED8D9 /* RxCocoa.framework */,
 				1E7860FE1C89FF4E00DED8D9 /* RxSwift.framework */,
 				1E7860FF1C89FF4E00DED8D9 /* Slack.framework */,
+				1E1A67681C9C62D100A96E9C /* SwiftyUserDefaults.framework */,
 				1EBE57D11C8578A20043C652 /* XCGLogger.framework */,
 			);
 			sourceTree = "<group>";
@@ -467,6 +475,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
 			);
 			outputPaths = (
 			);
