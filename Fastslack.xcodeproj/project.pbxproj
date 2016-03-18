@@ -11,7 +11,6 @@
 		1E1C441E1C9C28FD00DEC2A0 /* ErrorBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C441D1C9C28FD00DEC2A0 /* ErrorBundle.swift */; };
 		1E2ACC901C9AE4E200341B75 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2ACC8E1C9AE4E200341B75 /* NoteTableViewCell.swift */; };
 		1E2ACC911C9AE4E200341B75 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2ACC8F1C9AE4E200341B75 /* NoteTableViewCell.xib */; };
-		1E2FFFCE1C95B94100E4D52F /* SlackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FFFCD1C95B94100E4D52F /* SlackAPI.swift */; };
 		1E2FFFD01C95C58500E4D52F /* NoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FFFCF1C95C58500E4D52F /* NoteRepository.swift */; };
 		1E2FFFD21C95C75D00E4D52F /* RealmNoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2FFFD11C95C75D00E4D52F /* RealmNoteRepository.swift */; };
 		1E3676BE1C9C1AD8008A4EF6 /* DeleteNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3676BD1C9C1AD8008A4EF6 /* DeleteNoteUseCase.swift */; };
@@ -25,7 +24,7 @@
 		1E7C61EA1C88A8CD00D8490A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C61E81C88A8CD00D8490A /* RealmSwift.framework */; };
 		1EA5EFD81C983CBB001A6C8E /* SendNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5EFD71C983CBB001A6C8E /* SendNoteUseCase.swift */; };
 		1EA5EFDA1C984646001A6C8E /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5EFD91C984646001A6C8E /* Presenter.swift */; };
-		1EA5EFDC1C98471E001A6C8E /* EntryNotePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5EFDB1C98471E001A6C8E /* EntryNotePresenter.swift */; };
+		1EA5EFDC1C98471E001A6C8E /* SendNotePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5EFDB1C98471E001A6C8E /* SendNotePresenter.swift */; };
 		1EA5EFDE1C984890001A6C8E /* EntryNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5EFDD1C984890001A6C8E /* EntryNoteUseCase.swift */; };
 		1EAAF85C1C89C4180095A4B7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAAF85B1C89C4180095A4B7 /* Note.swift */; };
 		1EAAF8621C89C9770095A4B7 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAAF8611C89C9770095A4B7 /* Entity.swift */; };
@@ -67,7 +66,6 @@
 		1E1C441D1C9C28FD00DEC2A0 /* ErrorBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorBundle.swift; sourceTree = "<group>"; };
 		1E2ACC8E1C9AE4E200341B75 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		1E2ACC8F1C9AE4E200341B75 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
-		1E2FFFCD1C95B94100E4D52F /* SlackAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackAPI.swift; sourceTree = "<group>"; };
 		1E2FFFCF1C95C58500E4D52F /* NoteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteRepository.swift; sourceTree = "<group>"; };
 		1E2FFFD11C95C75D00E4D52F /* RealmNoteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmNoteRepository.swift; sourceTree = "<group>"; };
 		1E3676BD1C9C1AD8008A4EF6 /* DeleteNoteUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteNoteUseCase.swift; sourceTree = "<group>"; };
@@ -81,7 +79,7 @@
 		1E7C61E81C88A8CD00D8490A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		1EA5EFD71C983CBB001A6C8E /* SendNoteUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendNoteUseCase.swift; sourceTree = "<group>"; };
 		1EA5EFD91C984646001A6C8E /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		1EA5EFDB1C98471E001A6C8E /* EntryNotePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryNotePresenter.swift; sourceTree = "<group>"; };
+		1EA5EFDB1C98471E001A6C8E /* SendNotePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendNotePresenter.swift; sourceTree = "<group>"; };
 		1EA5EFDD1C984890001A6C8E /* EntryNoteUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryNoteUseCase.swift; sourceTree = "<group>"; };
 		1EAAF85B1C89C4180095A4B7 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		1EAAF8611C89C9770095A4B7 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
@@ -185,14 +183,6 @@
 			path = usecase;
 			sourceTree = "<group>";
 		};
-		1EA660E91C91C0BF00821952 /* api */ = {
-			isa = PBXGroup;
-			children = (
-				1E2FFFCD1C95B94100E4D52F /* SlackAPI.swift */,
-			);
-			path = api;
-			sourceTree = "<group>";
-		};
 		1EAAF85F1C89C6610095A4B7 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +213,7 @@
 		1ED7EED61C85765100CBE184 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
-				1EA5EFDB1C98471E001A6C8E /* EntryNotePresenter.swift */,
+				1EA5EFDB1C98471E001A6C8E /* SendNotePresenter.swift */,
 				1EDB4FD41C99A68200E5A88F /* NoteListPresenter.swift */,
 				1EA5EFD91C984646001A6C8E /* Presenter.swift */,
 			);
@@ -244,7 +234,6 @@
 		1ED7EED81C85767800CBE184 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				1EA660E91C91C0BF00821952 /* api */,
 				1EDB4FD61C99AFD300E5A88F /* repository */,
 				1E7C61ED1C88AA5B00D8490A /* storage */,
 				1E53238A1C9AF38A00E0693C /* util */,
@@ -501,7 +490,6 @@
 				1E2ACC901C9AE4E200341B75 /* NoteTableViewCell.swift in Sources */,
 				1EAAF8641C89D9180095A4B7 /* RealmStorage.swift in Sources */,
 				1EF85E9D1C8342A10092A3CF /* AppDelegate.swift in Sources */,
-				1E2FFFCE1C95B94100E4D52F /* SlackAPI.swift in Sources */,
 				1E2FFFD01C95C58500E4D52F /* NoteRepository.swift in Sources */,
 				1EAAF8621C89C9770095A4B7 /* Entity.swift in Sources */,
 				1E3676BE1C9C1AD8008A4EF6 /* DeleteNoteUseCase.swift in Sources */,
@@ -509,7 +497,7 @@
 				1EA5EFDE1C984890001A6C8E /* EntryNoteUseCase.swift in Sources */,
 				1EA5EFDA1C984646001A6C8E /* Presenter.swift in Sources */,
 				1EBE57D71C857E4F0043C652 /* Logger.swift in Sources */,
-				1EA5EFDC1C98471E001A6C8E /* EntryNotePresenter.swift in Sources */,
+				1EA5EFDC1C98471E001A6C8E /* SendNotePresenter.swift in Sources */,
 				1E1C441E1C9C28FD00DEC2A0 /* ErrorBundle.swift in Sources */,
 				1EDB4FD11C999FE400E5A88F /* FetchNoteUseCase.swift in Sources */,
 				1EAAF85C1C89C4180095A4B7 /* Note.swift in Sources */,
