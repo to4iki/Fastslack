@@ -14,6 +14,8 @@ final class DeleteNoteUseCase {
     private lazy var repository = RealmNoteRepository()
 }
 
+// MARK: - Action
+
 extension DeleteNoteUseCase {
     
     func delete(note: Note) -> Observable<Bool> {

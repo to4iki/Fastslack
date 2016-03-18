@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-final class EntryNoteUseCase: NSObject {
+final class EntryNoteUseCase {
     
     private lazy var repository = RealmNoteRepository()
 }

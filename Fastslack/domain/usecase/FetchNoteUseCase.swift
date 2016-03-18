@@ -14,6 +14,8 @@ final class FetchNoteUseCase {
     private lazy var repository = RealmNoteRepository()
 }
 
+// MARK: - Action
+
 extension FetchNoteUseCase {
     
     func fetchAll() -> Observable<Note> {

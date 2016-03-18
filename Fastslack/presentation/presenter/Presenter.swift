@@ -8,9 +8,8 @@
 
 import Foundation
 
+/// I/F
 protocol Presenter: class {
-    
-    // MARK: LifeCycle
     
     func viewDidLoad()
     
@@ -22,6 +21,8 @@ protocol Presenter: class {
     
     func viewDidDisappear(animated: Bool)
 }
+
+// MARK: - LifeCycle
 
 extension Presenter {
     

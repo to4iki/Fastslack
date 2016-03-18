@@ -29,7 +29,14 @@ let log: XCGLogger = {
     log.dateFormatter = dateFormatter
     
     // setup
-    log.setup(.Debug, showThreadName: true, showLogLevel: true, showFileNames: true, showLineNumbers: true, writeToFile: nil)
+    log.setup(
+        .Debug,
+        showThreadName: true,
+        showLogLevel: true,
+        showFileNames: true,
+        showLineNumbers: true,
+        writeToFile: nil
+    )
     
     return log
 }()
