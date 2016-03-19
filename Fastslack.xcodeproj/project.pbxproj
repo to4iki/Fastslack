@@ -12,6 +12,8 @@
 		1E0B119A1C99B85D007BBE25 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E0B11991C99B85D007BBE25 /* RxBlocking.framework */; };
 		1E1A67671C9C62A300A96E9C /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1A67661C9C62A300A96E9C /* KeychainAccess.framework */; };
 		1E1A67691C9C62D100A96E9C /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E1A67681C9C62D100A96E9C /* SwiftyUserDefaults.framework */; };
+		1E1B6FED1C9D420500D088F6 /* SetSlackConfigUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B6FEC1C9D420500D088F6 /* SetSlackConfigUseCase.swift */; };
+		1E1B6FF11C9D49E200D088F6 /* FetchSlackConfigUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1B6FF01C9D49E200D088F6 /* FetchSlackConfigUseCase.swift */; };
 		1E1C441E1C9C28FD00DEC2A0 /* ErrorBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C441D1C9C28FD00DEC2A0 /* ErrorBundle.swift */; };
 		1E2ACC901C9AE4E200341B75 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2ACC8E1C9AE4E200341B75 /* NoteTableViewCell.swift */; };
 		1E2ACC911C9AE4E200341B75 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2ACC8F1C9AE4E200341B75 /* NoteTableViewCell.xib */; };
@@ -73,6 +75,8 @@
 		1E0B11991C99B85D007BBE25 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		1E1A67661C9C62A300A96E9C /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		1E1A67681C9C62D100A96E9C /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
+		1E1B6FEC1C9D420500D088F6 /* SetSlackConfigUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSlackConfigUseCase.swift; sourceTree = "<group>"; };
+		1E1B6FF01C9D49E200D088F6 /* FetchSlackConfigUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchSlackConfigUseCase.swift; sourceTree = "<group>"; };
 		1E1C441D1C9C28FD00DEC2A0 /* ErrorBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorBundle.swift; sourceTree = "<group>"; };
 		1E2ACC8E1C9AE4E200341B75 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		1E2ACC8F1C9AE4E200341B75 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
@@ -194,7 +198,9 @@
 				1E3676BD1C9C1AD8008A4EF6 /* DeleteNoteUseCase.swift */,
 				1EA5EFDD1C984890001A6C8E /* EntryNoteUseCase.swift */,
 				1EDB4FD01C999FE400E5A88F /* FetchNoteUseCase.swift */,
+				1E1B6FF01C9D49E200D088F6 /* FetchSlackConfigUseCase.swift */,
 				1EA5EFD71C983CBB001A6C8E /* SendSlackUseCase.swift */,
+				1E1B6FEC1C9D420500D088F6 /* SetSlackConfigUseCase.swift */,
 			);
 			path = usecase;
 			sourceTree = "<group>";
@@ -516,6 +522,7 @@
 				1E049B0F1C9D365800871312 /* UserDefaultsStorage.swift in Sources */,
 				1EAAF8621C89C9770095A4B7 /* Entity.swift in Sources */,
 				1E3676BE1C9C1AD8008A4EF6 /* DeleteNoteUseCase.swift in Sources */,
+				1E1B6FED1C9D420500D088F6 /* SetSlackConfigUseCase.swift in Sources */,
 				1E7730A11C84952900C47C89 /* NoteListViewController.swift in Sources */,
 				1EA5EFDE1C984890001A6C8E /* EntryNoteUseCase.swift in Sources */,
 				1E049B0D1C9D31CE00871312 /* KeyChainStorage.swift in Sources */,
@@ -526,6 +533,7 @@
 				1E1C441E1C9C28FD00DEC2A0 /* ErrorBundle.swift in Sources */,
 				1E3092611C9D39C9008754DD /* KeyChainSlackConfigRepository.swift in Sources */,
 				1EDB4FD11C999FE400E5A88F /* FetchNoteUseCase.swift in Sources */,
+				1E1B6FF11C9D49E200D088F6 /* FetchSlackConfigUseCase.swift in Sources */,
 				1EAAF85C1C89C4180095A4B7 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

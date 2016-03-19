@@ -23,11 +23,10 @@ extension DeleteNoteUseCase {
             do {
                 try self.repository.delete(note)
                 observer.onNext(true)
+                observer.onCompleted()
             } catch {
                 observer.onError(ErrorBundle.DeleteError(message: "delete note failure."))
             }
-            
-            observer.onCompleted()
             
             return NopDisposable.instance
         }

@@ -31,11 +31,10 @@ extension EntryNoteUseCase {
             do {
                 try self.repository.store(note)
                 observer.onNext(note)
+                observer.onCompleted()
             } catch {
                 observer.onError(ErrorBundle.StoreError(message: "entry note failure."))
             }
-            
-            observer.onCompleted()
             
             return NopDisposable.instance
         }
