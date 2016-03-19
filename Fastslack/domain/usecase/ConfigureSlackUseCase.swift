@@ -21,9 +21,16 @@ extension ConfigureSlackUseCase {
     
     func configure() {
         fetchWebHookURL()
-            .subscribeNext { (url: NSURL) -> Void in
-                Slack.configure(url.absoluteString)
-            }
+            .subscribe(
+                onNext: { (url: NSURL) in
+                    Slack.configure(url.absoluteString)
+                },
+                onError: { _ in
+                    log.error("fetch WebHookURL failure")
+                },
+                onCompleted: nil,
+                onDisposed: nil
+            )
             .dispose()
     }
     

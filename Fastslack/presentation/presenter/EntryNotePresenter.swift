@@ -31,7 +31,7 @@ extension EntryNotePresenter {
         let note = entryUseCase.create(message)
         
         sendUseCase.sendSlack(note.body)
-            .retry()
+            .retry(3)
             .flatMap { _ -> Observable<Note> in
                 self.entryUseCase.entry(note)
             }
