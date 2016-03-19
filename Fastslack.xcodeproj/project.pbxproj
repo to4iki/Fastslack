@@ -40,7 +40,6 @@
 		1EAAF85C1C89C4180095A4B7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAAF85B1C89C4180095A4B7 /* Note.swift */; };
 		1EAAF8621C89C9770095A4B7 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAAF8611C89C9770095A4B7 /* Entity.swift */; };
 		1EAAF8641C89D9180095A4B7 /* RealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAAF8631C89D9180095A4B7 /* RealmStorage.swift */; };
-		1EBB13CA1C9DC41A00A6116F /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBB13C91C9DC41A00A6116F /* Eureka.framework */; };
 		1EBE57D21C8578A20043C652 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBE57D11C8578A20043C652 /* XCGLogger.framework */; };
 		1EBE57D71C857E4F0043C652 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBE57D61C857E4F0043C652 /* Logger.swift */; };
 		1EDB4FD11C999FE400E5A88F /* FetchNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDB4FD01C999FE400E5A88F /* FetchNoteUseCase.swift */; };
@@ -107,7 +106,6 @@
 		1EAAF85B1C89C4180095A4B7 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		1EAAF8611C89C9770095A4B7 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		1EAAF8631C89D9180095A4B7 /* RealmStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmStorage.swift; sourceTree = "<group>"; };
-		1EBB13C91C9DC41A00A6116F /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
 		1EBE57D11C8578A20043C652 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		1EBE57D61C857E4F0043C652 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		1EDB4FD01C999FE400E5A88F /* FetchNoteUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchNoteUseCase.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EBB13CA1C9DC41A00A6116F /* Eureka.framework in Frameworks */,
 				1E1A67691C9C62D100A96E9C /* SwiftyUserDefaults.framework in Frameworks */,
 				1E1A67671C9C62A300A96E9C /* KeychainAccess.framework in Frameworks */,
 				1E7861021C89FF8800DED8D9 /* Slack.framework in Frameworks */,
@@ -306,7 +303,6 @@
 				1EF85EB01C8342A10092A3CF /* FastslackTests */,
 				1EF85EBB1C8342A10092A3CF /* FastslackUITests */,
 				1EF85E9A1C8342A00092A3CF /* Products */,
-				1EBB13C91C9DC41A00A6116F /* Eureka.framework */,
 				1E1A67661C9C62A300A96E9C /* KeychainAccess.framework */,
 				1E7C61E71C88A8CD00D8490A /* Realm.framework */,
 				1E7C61E81C88A8CD00D8490A /* RealmSwift.framework */,
@@ -508,7 +504,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Eureka.framework",
 			);
 			outputPaths = (
 			);
