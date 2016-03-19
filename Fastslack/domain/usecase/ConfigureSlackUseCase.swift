@@ -12,12 +12,16 @@ import Slack
 
 final class ConfigureSlackUseCase {
     
-    private lazy var repository = KeyChainSlackConfigRepository()
+    private lazy var configRepository = KeyChainSlackConfigRepository()
+    
+    private lazy var messageRepository = UserDefaultsMessageRepository()
 }
 
 // MARK: - Action
 
 extension ConfigureSlackUseCase {
+    
+    // MARK: Configure
     
     func configure() {
         fetchWebHookURL()
@@ -34,10 +38,43 @@ extension ConfigureSlackUseCase {
             .dispose()
     }
     
+    // MARK: Fetch
+    
+    func fetchWebHookURL() -> Observable<NSURL> {
+        return Observable.create { observer in
+            do {
+                if let rawUrl = try self.configRepository.getWebHookURL(), url = NSURL(string: rawUrl) {
+                    observer.onNext(url)
+                }
+                
+                observer.onCompleted()
+            } catch let error {
+                observer.onError(error)
+            }
+            
+            return NopDisposable.instance
+        }
+    }
+    
+    func fetchMessage() -> Observable<Message> {
+        return Observable.create { observer in
+            if let message = self.messageRepository.getMessage() {
+                observer.onNext(message)
+                observer.onCompleted()
+            } else {
+                observer.onError(ErrorBundle.FetchError(message: "fetch message config failure"))
+            }
+            
+            return NopDisposable.instance
+        }
+    }
+    
+    // MARK: Set
+    
     func setWebHookURL(url: String) -> Observable<String> {
         return Observable.create { observer in
             do {
-                try self.repository.setWebHookURL(url)
+                try self.configRepository.setWebHookURL(url)
                 observer.onNext(url)
                 observer.onCompleted()
             } catch let error {
@@ -48,17 +85,11 @@ extension ConfigureSlackUseCase {
         }
     }
     
-    private func fetchWebHookURL() -> Observable<NSURL> {
+    func setMessage(message: Message) -> Observable<Message> {
         return Observable.create { observer in
-            do {
-                if let rawUrl = try self.repository.getWebHookURL(), url = NSURL(string: rawUrl) {
-                    observer.onNext(url)
-                }
-                
-                observer.onCompleted()
-            } catch let error {
-                observer.onError(error)
-            }
+            self.messageRepository.storeMessage(message)
+            observer.onNext(message)
+            observer.onCompleted()
             
             return NopDisposable.instance
         }
