@@ -15,6 +15,8 @@ struct Message: ValueObject {
     let botName: String?
     
     let iconEmoji: String?
+    
+    static let defaultMessage = Message(channel: "#general", botName: "Fastslack", iconEmoji: ":ghost:") 
 }
 
 // MARK: - CustomStringConvertible

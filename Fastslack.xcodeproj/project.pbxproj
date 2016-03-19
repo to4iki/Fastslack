@@ -33,6 +33,7 @@
 		1E7C61EA1C88A8CD00D8490A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7C61E81C88A8CD00D8490A /* RealmSwift.framework */; };
 		1E804A321C9D83B00074A2E5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E804A311C9D83B00074A2E5 /* Message.swift */; };
 		1E804A341C9D83E30074A2E5 /* ValueObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E804A331C9D83E30074A2E5 /* ValueObject.swift */; };
+		1E98D18A1C9DF46A009A20AD /* ConfigureSlackPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98D1891C9DF46A009A20AD /* ConfigureSlackPresenter.swift */; };
 		1EA5EFD81C983CBB001A6C8E /* SendSlackUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5EFD71C983CBB001A6C8E /* SendSlackUseCase.swift */; };
 		1EA5EFDA1C984646001A6C8E /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5EFD91C984646001A6C8E /* Presenter.swift */; };
 		1EA5EFDC1C98471E001A6C8E /* EntryNotePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5EFDB1C98471E001A6C8E /* EntryNotePresenter.swift */; };
@@ -99,6 +100,7 @@
 		1E7C61E81C88A8CD00D8490A /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		1E804A311C9D83B00074A2E5 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		1E804A331C9D83E30074A2E5 /* ValueObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueObject.swift; sourceTree = "<group>"; };
+		1E98D1891C9DF46A009A20AD /* ConfigureSlackPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureSlackPresenter.swift; sourceTree = "<group>"; };
 		1EA5EFD71C983CBB001A6C8E /* SendSlackUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendSlackUseCase.swift; sourceTree = "<group>"; };
 		1EA5EFD91C984646001A6C8E /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		1EA5EFDB1C98471E001A6C8E /* EntryNotePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryNotePresenter.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 		1ED7EED61C85765100CBE184 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				1E98D1891C9DF46A009A20AD /* ConfigureSlackPresenter.swift */,
 				1EA5EFDB1C98471E001A6C8E /* EntryNotePresenter.swift */,
 				1EDB4FD41C99A68200E5A88F /* NoteListPresenter.swift */,
 				1EA5EFD91C984646001A6C8E /* Presenter.swift */,
@@ -542,6 +545,7 @@
 				1EA5EFDC1C98471E001A6C8E /* EntryNotePresenter.swift in Sources */,
 				1E804A341C9D83E30074A2E5 /* ValueObject.swift in Sources */,
 				1E1896941C9D939D00C2E4B9 /* UserDefaultsStorage.swift in Sources */,
+				1E98D18A1C9DF46A009A20AD /* ConfigureSlackPresenter.swift in Sources */,
 				1E30925F1C9D38E1008754DD /* SlackConfigRepository.swift in Sources */,
 				1E1C441E1C9C28FD00DEC2A0 /* ErrorBundle.swift in Sources */,
 				1E3092611C9D39C9008754DD /* KeyChainSlackConfigRepository.swift in Sources */,
