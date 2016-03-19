@@ -53,16 +53,16 @@ extension MainViewController {
     
     private func bindView() {
         textView.rx_text
-            .map({ !$0.isEmpty })
+            .map { !$0.isEmpty }
             .bindTo(doneButton.rx_enabled)
             .addDisposableTo(disposeBag)
         
         doneButton.rx_tap
-            .subscribeNext({ [unowned self] _ in
+            .subscribeNext { [unowned self] _ in
                 guard let text = self.textView.text else { return }
                 self.presenter.send(text)
                 self.clearText()
-            })
+            }
             .addDisposableTo(disposeBag)
     }
     

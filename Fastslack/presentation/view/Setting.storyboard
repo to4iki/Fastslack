@@ -1,28 +1,84 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s33-JV-cFo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GY9-dK-Ggf">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Setting-->
-        <scene sceneID="e0E-2f-dx7">
+        <!--Navigation Controller-->
+        <scene sceneID="mVt-7h-U1z">
             <objects>
-                <viewController id="s33-JV-cFo" customClass="SettingViewController" customModule="Fastslack" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0hZ-xl-kk0"/>
-                        <viewControllerLayoutGuide type="bottom" id="nZv-FL-Lem"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Cw4-HY-pxm">
+                <navigationController id="GY9-dK-Ggf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kBD-mw-CYp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6Vj-6W-Dkd" kind="relationship" relationship="rootViewController" id="EbX-La-tsh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DTh-Ri-wnE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19" y="299"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="JpN-JR-nJf">
+            <objects>
+                <tableViewController id="6Vj-6W-Dkd" customClass="SettingViewController" customModule="Fastslack" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="r9k-aC-D6m">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Setting" id="lyh-ND-A9Q"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dgp-Kt-oGY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Slack WebHook URL" footerTitle="This is where you will send your notes." id="IkJ-hv-niY">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ca5-6d-neC">
+                                        <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ca5-6d-neC" id="o80-Wp-tmk">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="https://hooks.slack.com/services/example..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTS-gC-Qb1">
+                                                    <rect key="frame" x="8" y="8" width="584" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xTS-gC-Qb1" secondAttribute="bottom" id="8hP-oJ-TNg"/>
+                                                <constraint firstItem="xTS-gC-Qb1" firstAttribute="top" secondItem="o80-Wp-tmk" secondAttribute="topMargin" id="R5Z-S3-d2a"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xTS-gC-Qb1" secondAttribute="trailing" id="XjW-9Z-1NL"/>
+                                                <constraint firstItem="xTS-gC-Qb1" firstAttribute="leading" secondItem="o80-Wp-tmk" secondAttribute="leadingMargin" id="amc-Ba-s2V"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="6Vj-6W-Dkd" id="zFO-Kq-P9i"/>
+                            <outlet property="delegate" destination="6Vj-6W-Dkd" id="Xej-xR-Ysh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="B0q-pb-iyw">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="IdX-Sx-AAk">
+                            <connections>
+                                <action selector="onClickCloseButton:" destination="6Vj-6W-Dkd" id="5TX-0m-srV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="CpO-fR-TBD"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="closeButton" destination="IdX-Sx-AAk" id="iNW-H9-u4Z"/>
+                        <outlet property="doneButton" destination="CpO-fR-TBD" id="G3g-SO-w9a"/>
+                        <outlet property="webHookURLTextField" destination="xTS-gC-Qb1" id="Dia-MJ-uam"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Wr-RF-RCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="390" y="386"/>
+            <point key="canvasLocation" x="695" y="299"/>
         </scene>
     </scenes>
 </document>
