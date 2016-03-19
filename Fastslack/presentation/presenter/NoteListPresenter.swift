@@ -17,7 +17,7 @@ final class NoteListPresenter {
     
     private lazy var deleteUseCase = DeleteNoteUseCase()
     
-    private(set) var variable = Variable<[Note]>([])
+    private(set) var notes = Variable<[Note]>([])
 }
 
 // MARK: - Presenter
@@ -36,18 +36,18 @@ extension NoteListPresenter {
     private func fetchAllNote() {
         fetchUseCase.fetchAll()
             .subscribeNext { [unowned self] (note: Note) in
-                self.variable.value.append(note)
+                self.notes.value.append(note)
             }
             .addDisposableTo(disposeBag)
     }
     
     func deleteNoteBy(index: Int) {
-        let note = variable.value[index]
+        let note = notes.value[index]
         
         deleteUseCase.delete(note)
             .subscribeNext { [unowned self] (success: Bool) in
                 if success {
-                    self.variable.value.removeAtIndex(index)
+                    self.notes.value.removeAtIndex(index)
                 }
             }
             .addDisposableTo(disposeBag)

@@ -58,7 +58,7 @@ extension NoteListViewController {
     }
     
     private func bindView() {
-        presenter.variable.asObservable()
+        presenter.notes.asObservable()
             .bindTo(tableView.rx_itemsWithCellIdentifier(NoteTableViewCell.CellIdentifier, cellType: NoteTableViewCell.self)) { (row, element, cell) -> Void in
                 cell.bind(element)
             }
