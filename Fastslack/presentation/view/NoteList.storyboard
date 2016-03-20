@@ -38,7 +38,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="ZYv-02-5fb">
                             <connections>
-                                <segue destination="FYc-We-taa" kind="push" id="x3b-wn-0aN"/>
+                                <segue destination="FYc-We-taa" kind="presentation" id="x3b-wn-0aN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

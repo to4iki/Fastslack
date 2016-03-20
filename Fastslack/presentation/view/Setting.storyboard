@@ -56,6 +56,81 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Slack Chanel" id="1LK-vW-cFP">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0G1-mW-GYY">
+                                        <rect key="frame" x="0.0" y="224" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0G1-mW-GYY" id="iRX-dW-mZT">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="@slackbot" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YiF-D8-8o2">
+                                                    <rect key="frame" x="8" y="8" width="584" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YiF-D8-8o2" firstAttribute="top" secondItem="iRX-dW-mZT" secondAttribute="topMargin" id="0Uo-Cx-1ep"/>
+                                                <constraint firstItem="YiF-D8-8o2" firstAttribute="leading" secondItem="iRX-dW-mZT" secondAttribute="leadingMargin" id="1oP-80-U2r"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="YiF-D8-8o2" secondAttribute="bottom" id="9Xh-Ca-Y4V"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="YiF-D8-8o2" secondAttribute="trailing" id="NPH-8q-3Tc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Slack botname" id="NwP-c0-nPh">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ETx-c6-Pxf">
+                                        <rect key="frame" x="0.0" y="318" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ETx-c6-Pxf" id="SwN-lg-O5s">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="fastslack" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rXJ-JN-x4X">
+                                                    <rect key="frame" x="8" y="8" width="584" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rXJ-JN-x4X" secondAttribute="bottom" id="G0U-GB-uHQ"/>
+                                                <constraint firstItem="rXJ-JN-x4X" firstAttribute="leading" secondItem="SwN-lg-O5s" secondAttribute="leadingMargin" id="Xjp-xn-xmN"/>
+                                                <constraint firstItem="rXJ-JN-x4X" firstAttribute="top" secondItem="SwN-lg-O5s" secondAttribute="topMargin" id="byE-5Y-le2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="rXJ-JN-x4X" secondAttribute="trailing" id="hvb-8h-Ndg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Slack icon emoji" id="F6w-Gb-miL">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SwS-Lk-ahS">
+                                        <rect key="frame" x="0.0" y="412" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SwS-Lk-ahS" id="L39-Ap-bLk">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=":ghost:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QnO-Iv-Gby">
+                                                    <rect key="frame" x="8" y="8" width="584" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QnO-Iv-Gby" firstAttribute="top" secondItem="L39-Ap-bLk" secondAttribute="topMargin" id="4c3-ny-Rzr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="QnO-Iv-Gby" secondAttribute="trailing" id="5Il-nW-Z2k"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="QnO-Iv-Gby" secondAttribute="bottom" id="JEH-1N-k7a"/>
+                                                <constraint firstItem="QnO-Iv-Gby" firstAttribute="leading" secondItem="L39-Ap-bLk" secondAttribute="leadingMargin" id="RcW-4Z-alt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="6Vj-6W-Dkd" id="zFO-Kq-P9i"/>
@@ -71,8 +146,11 @@
                         <barButtonItem key="rightBarButtonItem" title="Done" id="CpO-fR-TBD"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="botNameTextField" destination="rXJ-JN-x4X" id="yJs-fc-J6z"/>
+                        <outlet property="chanelTextField" destination="YiF-D8-8o2" id="QOU-JT-b9e"/>
                         <outlet property="closeButton" destination="IdX-Sx-AAk" id="iNW-H9-u4Z"/>
                         <outlet property="doneButton" destination="CpO-fR-TBD" id="G3g-SO-w9a"/>
+                        <outlet property="iconEmojiTextField" destination="QnO-Iv-Gby" id="spC-l3-a3W"/>
                         <outlet property="webHookURLTextField" destination="xTS-gC-Qb1" id="Dia-MJ-uam"/>
                     </connections>
                 </tableViewController>

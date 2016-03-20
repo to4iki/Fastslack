@@ -14,9 +14,15 @@ final class SettingViewController: UITableViewController {
     
     @IBOutlet private weak var webHookURLTextField: UITextField!
     
-    @IBOutlet weak var closeButton: UIBarButtonItem!
+    @IBOutlet private weak var chanelTextField: UITextField!
     
-    @IBOutlet weak var doneButton: UIBarButtonItem! {
+    @IBOutlet private weak var botNameTextField: UITextField!
+    
+    @IBOutlet private weak var iconEmojiTextField: UITextField!
+    
+    @IBOutlet private weak var closeButton: UIBarButtonItem!
+    
+    @IBOutlet private weak var doneButton: UIBarButtonItem! {
         didSet {
             doneButton.enabled = false
         }
