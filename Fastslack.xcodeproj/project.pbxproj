@@ -134,11 +134,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E7861011C89FF7C00DED8D9 /* RxSwift.framework in Frameworks */,
 				1E1A67691C9C62D100A96E9C /* SwiftyUserDefaults.framework in Frameworks */,
 				1E1A67671C9C62A300A96E9C /* KeychainAccess.framework in Frameworks */,
 				1E7861021C89FF8800DED8D9 /* Slack.framework in Frameworks */,
 				1E0B119A1C99B85D007BBE25 /* RxBlocking.framework in Frameworks */,
-				1E7861011C89FF7C00DED8D9 /* RxSwift.framework in Frameworks */,
 				1E7861001C89FF6B00DED8D9 /* RxCocoa.framework in Frameworks */,
 				1E7C61E91C88A8CD00D8490A /* Realm.framework in Frameworks */,
 				1E7C61EA1C88A8CD00D8490A /* RealmSwift.framework in Frameworks */,
@@ -694,6 +694,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -709,6 +710,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
