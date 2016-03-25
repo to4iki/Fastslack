@@ -19,6 +19,9 @@ final class NoteListViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     private var closeCompletionHandler: (() -> Void)?
+    
+    private lazy var longPressRecognizer: UILongPressGestureRecognizer =
+        UILongPressGestureRecognizer(target: self, action: .cellLongPressed)
 }
 
 // MARK: - UIViewController
@@ -32,6 +35,7 @@ extension NoteListViewController {
         
         setupView()
         bindView()
+        setupRecognizer()
     }
 }
 
@@ -59,8 +63,10 @@ extension NoteListViewController {
     
     private func bindView() {
         presenter.notes.asObservable()
-            .bindTo(tableView.rx_itemsWithCellIdentifier(NoteTableViewCell.CellIdentifier, cellType: NoteTableViewCell.self)) { (row, element, cell) -> Void in
-                cell.bind(element)
+            .bindTo(tableView.rx_itemsWithCellIdentifier(
+                NoteTableViewCell.CellIdentifier,
+                cellType: NoteTableViewCell.self)) { (row, element, cell) -> Void in
+                    cell.bind(element)
             }
             .addDisposableTo(disposeBag)
         
@@ -81,6 +87,26 @@ extension NoteListViewController {
     }
 }
 
+// MARK: - UIGestureRecognizerDelegate
+
+extension NoteListViewController: UIGestureRecognizerDelegate {
+    
+    private func setupRecognizer() {
+        longPressRecognizer.delegate = self
+        tableView.addGestureRecognizer(longPressRecognizer)
+    }
+    
+    func cellLongPressed(recognizer: UILongPressGestureRecognizer) {
+        let point = recognizer.locationInView(tableView)
+        let indexPath = tableView.indexPathForRowAtPoint(point)
+        
+        if recognizer.state == UIGestureRecognizerState.Began {
+            // TODO: Show ActionBar
+        }
+    }
+}
+
+
 // MARK: - Action
 
 extension NoteListViewController {
@@ -88,4 +114,11 @@ extension NoteListViewController {
     @IBAction func onClickCloseButton(sender: UIBarButtonItem) {
         dismissViewControllerAnimated(true, completion: closeCompletionHandler)
     }
+}
+
+// MARK: - Selector in ViewController
+
+private extension Selector {
+    
+    static let cellLongPressed = #selector(NoteListViewController.cellLongPressed(_:))
 }
