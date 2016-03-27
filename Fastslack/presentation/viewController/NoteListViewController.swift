@@ -34,7 +34,7 @@ extension NoteListViewController {
         presenter.viewDidLoad()
         
         setupView()
-        bindView()
+        bind()
         setupRecognizer()
     }
 }
@@ -66,7 +66,7 @@ extension NoteListViewController {
         hideSeparator()
     }
     
-    private func bindView() {
+    private func bind() {
         presenter.notes.asObservable()
             .bindTo(tableView.rx_itemsWithCellIdentifier(
                 NoteListViewCell.CellIdentifier,

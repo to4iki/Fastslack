@@ -18,14 +18,6 @@ final class EntryNoteUseCase {
 
 extension EntryNoteUseCase {
     
-    func create(text: String) -> Note {
-        let note = Note()
-        note.id = repository.autoIncrementId()
-        note.body = text
-        
-        return note
-    }
-    
     func entry(note: Note) -> Observable<Note> {
         return Observable.create { observer in
             do {

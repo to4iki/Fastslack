@@ -10,11 +10,11 @@ import Foundation
 
 struct MessageAttribute: ValueObject {
     
-    let channel: String
+    let channel: String?
     
-    let botName: String
+    let botName: String?
     
-    let iconEmoji: String
+    let iconEmoji: String?
 }
 
 // MARK: - CustomStringConvertible

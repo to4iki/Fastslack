@@ -12,15 +12,19 @@ import Slack
 struct NoteWriteDto {
     
     private let body: String
+    
+    init(body: String) {
+        self.body = body
+    }
 }
 
 // MARK: - Converter
 
 extension NoteWriteDto {
     
-    func convertNote(id: Int) -> Note {
+    func convertNote() -> Note {
         let note = Note()
-        note.id = id
+        note.id = RealmNoteRepository.autoIncrementId()
         note.body = body
         
         return note
@@ -28,9 +32,9 @@ extension NoteWriteDto {
     
     func convertSlackMessage(attribute: MessageAttribute) -> Slack.Message {
         return Slack.Message.build { (m: Slack.Message) in
-            m.channel(attribute.channel)
-            m.botName(attribute.botName)
-            m.iconEmoji(attribute.iconEmoji)
+            m.channel(attribute.channel ?? m.defaultChannel)
+            m.botName(attribute.botName ?? m.defaultBotName)
+            m.iconEmoji(attribute.iconEmoji ?? m.defaultIconEmoji)
             m.text(self.body, linkEnable: true)
         }
     }

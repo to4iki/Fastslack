@@ -36,13 +36,13 @@ extension MainViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter.viewDidLoad()
-        bindView()
+        bind()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        presenter.viewWillAppear(animated)
         autoFocus()
     }
 }
@@ -51,7 +51,7 @@ extension MainViewController {
 
 extension MainViewController {
     
-    private func bindView() {
+    private func bind() {
         textView.rx_text
             .map { !$0.isEmpty }
             .bindTo(doneButton.rx_enabled)
@@ -85,7 +85,7 @@ extension MainViewController {
             where segue.identifier == "NoteListSegue" else { fatalError() }
         
         toViewController.setCloseCompletionHandler({
-            log.info("close notes view controller")
+            log.info("close notes view controller.")
         })
     }
 }
