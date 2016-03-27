@@ -28,6 +28,14 @@ extension ConfigureSlackPresenter: Presenter {
     func viewWillAppear(animated: Bool) {
         fetchConfig()
     }
+    
+    func viewWillDisappear(animated: Bool) {
+        storeWebHookURL()
+    }
+    
+    func viewDidDisappear(animated: Bool) {
+        refreshConfig()
+    }
 }
 
 // MARK: - Action
@@ -47,16 +55,17 @@ extension ConfigureSlackPresenter {
             .addDisposableTo(disposeBag)
     }
     
-    func storeWebHookURL() {
+    private func storeWebHookURL() {
         usecase.setWebHookURL(webHookURL.value)
             .subscribeCompleted {
-                log.info("complete store webHookURL")
+                log.info("store webHookURL completed.")
             }
             .addDisposableTo(disposeBag)
     }
     
-    func refreshConfig() {
+    private func refreshConfig() {
         if !webHookURL.value.isEmpty {
+            log.info("configure webHookURL refreshed.")
             Slack.configure(webHookURL.value)
         }
     }

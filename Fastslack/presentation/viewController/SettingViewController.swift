@@ -20,14 +20,6 @@ final class SettingViewController: UITableViewController {
     
     @IBOutlet private weak var iconEmojiTextField: UITextField!
     
-    @IBOutlet private weak var closeButton: UIBarButtonItem!
-    
-    @IBOutlet private weak var doneButton: UIBarButtonItem! {
-        didSet {
-            doneButton.enabled = false
-        }
-    }
-    
     private var closeCompletionHandler: (() -> Void)?
     
     private let presenter = ConfigureSlackPresenter()
@@ -41,12 +33,22 @@ extension SettingViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         bindView()
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         presenter.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        presenter.viewWillDisappear(animated)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        presenter.viewDidDisappear(animated)
     }
 }
 
@@ -56,15 +58,9 @@ extension SettingViewController {
     
     private func bindView() {
         bindTextField()
-        bindButton()
     }
     
     private func bindTextField() {
-        webHookURLTextField.rx_text
-            .map { !$0.isEmpty }
-            .bindTo(doneButton.rx_enabled)
-            .addDisposableTo(disposeBag)
-        
         webHookURLTextField.rx_text
             .subscribeNext { [unowned self] text in
                 self.presenter.webHookURL.value = text
@@ -73,14 +69,6 @@ extension SettingViewController {
         
         presenter.webHookURL.asObservable()
             .bindTo(webHookURLTextField.rx_text)
-            .addDisposableTo(disposeBag)
-    }
-    
-    private func bindButton() {
-        doneButton.rx_tap
-            .subscribeNext { [unowned self] _ in
-                self.presenter.storeWebHookURL()
-            }
             .addDisposableTo(disposeBag)
     }
 }
@@ -99,7 +87,6 @@ extension SettingViewController {
 extension SettingViewController {
     
     @IBAction func onClickCloseButton(sender: UIBarButtonItem) {
-        self.presenter.refreshConfig()
         dismissViewControllerAnimated(true, completion: closeCompletionHandler)
     }
 }

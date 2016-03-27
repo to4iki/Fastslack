@@ -36,7 +36,7 @@ extension EntryNotePresenter {
                 self.entryUseCase.entry(note)
             }
             .subscribeCompleted {
-                log.info("complete send messsage")
+                log.info("send messsage completed.")
             }
             .addDisposableTo(disposeBag)
     }

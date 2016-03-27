@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GY9-dK-Ggf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GY9-dK-Ggf">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -143,13 +143,10 @@
                                 <action selector="onClickCloseButton:" destination="6Vj-6W-Dkd" id="5TX-0m-srV"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="CpO-fR-TBD"/>
                     </navigationItem>
                     <connections>
                         <outlet property="botNameTextField" destination="rXJ-JN-x4X" id="yJs-fc-J6z"/>
                         <outlet property="chanelTextField" destination="YiF-D8-8o2" id="QOU-JT-b9e"/>
-                        <outlet property="closeButton" destination="IdX-Sx-AAk" id="iNW-H9-u4Z"/>
-                        <outlet property="doneButton" destination="CpO-fR-TBD" id="G3g-SO-w9a"/>
                         <outlet property="iconEmojiTextField" destination="QnO-Iv-Gby" id="spC-l3-a3W"/>
                         <outlet property="webHookURLTextField" destination="xTS-gC-Qb1" id="Dia-MJ-uam"/>
                     </connections>

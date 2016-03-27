@@ -11,7 +11,7 @@ import RxSwift
 
 final class EntryNoteUseCase {
     
-    private lazy var repository = RealmNoteRepository()
+    private let repository = RealmNoteRepository()
 }
 
 // MARK: - Action

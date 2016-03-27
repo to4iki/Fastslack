@@ -12,9 +12,9 @@ import Slack
 
 final class ConfigureSlackUseCase {
     
-    private lazy var configRepository = KeyChainSlackConfigRepository()
+    private let configRepository = KeyChainSlackConfigRepository()
     
-    private lazy var messageRepository = UserDefaultsMessageRepository()
+    private let messageRepository = UserDefaultsMessageRepository()
 }
 
 // MARK: - Action
@@ -26,13 +26,9 @@ extension ConfigureSlackUseCase {
     func configure() {
         fetchWebHookURL()
             .subscribe(
-                onNext: { (url: NSURL) in
-                    Slack.configure(url.absoluteString)
-                },
-                onError: { _ in
-                    log.error("fetch WebHookURL failure")
-                },
-                onCompleted: nil,
+                onNext: { (url: NSURL) in Slack.configure(url.absoluteString) },
+                onError: { _ in log.error("fetch WebHookURL failure.") },
+                onCompleted: { _ in log.info("fetch WebHookURL completed.") },
                 onDisposed: nil
             )
             .dispose()
@@ -46,7 +42,6 @@ extension ConfigureSlackUseCase {
                 if let rawUrl = try self.configRepository.getWebHookURL(), url = NSURL(string: rawUrl) {
                     observer.onNext(url)
                 }
-                
                 observer.onCompleted()
             } catch let error {
                 observer.onError(error)

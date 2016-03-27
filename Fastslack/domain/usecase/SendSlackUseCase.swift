@@ -12,7 +12,7 @@ import Slack
 
 final class SendSlackUseCase {
     
-    private lazy var client = Slack.sharedInstance
+    private let client = Slack.sharedInstance
 }
 
 // MARK: - Action
