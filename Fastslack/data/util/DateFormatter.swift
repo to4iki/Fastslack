@@ -13,7 +13,7 @@ let dateFormatter: NSDateFormatter = {
     
     formatter.timeStyle = .LongStyle
     formatter.dateStyle = .ShortStyle
-    formatter.dateFormat = "yyyy/MM/dd HH:mm:ss"
+    formatter.dateFormat = "yyyy/MM/dd HH:mm"
     
     return formatter
 }()
