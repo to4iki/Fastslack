@@ -13,9 +13,9 @@ final class EntryNotePresenter {
     
     private let disposeBag = DisposeBag()
     
-    private let entryUseCase = EntryNoteUseCase()
+    private lazy var entryUseCase = EntryNoteUseCase()
     
-    private let sendUseCase = SendSlackUseCase()
+    private lazy var sendUseCase = SendSlackUseCase()
 }
 
 // MARK: - Presenter

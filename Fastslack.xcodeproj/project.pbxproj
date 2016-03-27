@@ -50,6 +50,46 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>1E119B5B1CA79EB700A2D754</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>NoteListFooterView.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E119B5C1CA79EB700A2D754</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1E119B5B1CA79EB700A2D754</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1E119B5E1CA79EDC00A2D754</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>NoteListFooterView.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E119B5F1CA79EDC00A2D754</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1E119B5E1CA79EDC00A2D754</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>1E18968F1C9D904700C2E4B9</key>
 		<dict>
 			<key>fileEncoding</key>
@@ -940,6 +980,8 @@ fi</string>
 				<string>1EF85EA51C8342A10092A3CF</string>
 				<string>1EF85EA01C8342A10092A3CF</string>
 				<string>1E77309E1C84930B00C47C89</string>
+				<string>1E119B5B1CA79EB700A2D754</string>
+				<string>1E119B5E1CA79EDC00A2D754</string>
 				<string>1E2ACC8E1C9AE4E200341B75</string>
 				<string>1E2ACC8F1C9AE4E200341B75</string>
 				<string>1EFE26E81C87339700D22F32</string>
@@ -1150,6 +1192,7 @@ fi</string>
 				<string>1E3092611C9D39C9008754DD</string>
 				<string>1EDB4FD11C999FE400E5A88F</string>
 				<string>1EAAF85C1C89C4180095A4B7</string>
+				<string>1E119B5C1CA79EB700A2D754</string>
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>
@@ -1183,6 +1226,7 @@ fi</string>
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
+				<string>1E119B5F1CA79EDC00A2D754</string>
 				<string>1E77309F1C84930B00C47C89</string>
 				<string>1EF85EA71C8342A10092A3CF</string>
 				<string>1EFE26E91C87339700D22F32</string>

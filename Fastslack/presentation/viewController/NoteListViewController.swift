@@ -56,7 +56,12 @@ extension NoteListViewController {
             tableView.tableFooterView = view
         }
         
-        tableView.registerNib(NoteListViewCell.nib(), forCellReuseIdentifier: NoteListViewCell.CellIdentifier)
+        func setupTableView() {
+            tableView.registerNib(NoteListViewCell.nib(), forCellReuseIdentifier: NoteListViewCell.CellIdentifier)
+            tableView.delegate = self
+        }
+        
+        setupTableView()
         configureDynamicCellSizing()
         hideSeparator()
     }
@@ -75,6 +80,15 @@ extension NoteListViewController {
                 self.presenter.deleteNoteBy(indexPath.row)
             }
             .addDisposableTo(disposeBag)
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension NoteListViewController: UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return NoteListFooterView.insance()
     }
 }
 
@@ -105,7 +119,6 @@ extension NoteListViewController: UIGestureRecognizerDelegate {
         }
     }
 }
-
 
 // MARK: - Action
 
