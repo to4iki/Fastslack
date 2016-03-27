@@ -103,6 +103,41 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>1E1420661CA7CFB000AB7EDF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1E1420671CA7CFDD00AB7EDF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>api</string>
+			<key>path</key>
+			<string>api</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E1420671CA7CFDD00AB7EDF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Slack+Fastslack.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E1420681CA7CFDD00AB7EDF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1E1420671CA7CFDD00AB7EDF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>1E18968F1C9D904700C2E4B9</key>
 		<dict>
 			<key>fileEncoding</key>
@@ -892,8 +927,6 @@ fi</string>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
-			<key>name</key>
-			<string>NoteWriteDto.swift</string>
 			<key>path</key>
 			<string>NoteWriteDto.swift</string>
 			<key>sourceTree</key>
@@ -997,6 +1030,7 @@ fi</string>
 		<dict>
 			<key>children</key>
 			<array>
+				<string>1E1420661CA7CFB000AB7EDF</string>
 				<string>1EDB4FD61C99AFD300E5A88F</string>
 				<string>1E7C61ED1C88AA5B00D8490A</string>
 				<string>1E53238A1C9AF38A00E0693C</string>
@@ -1222,6 +1256,7 @@ fi</string>
 				<string>1E804A321C9D83B00074A2E5</string>
 				<string>1EA5EFDC1C98471E001A6C8E</string>
 				<string>1E804A341C9D83E30074A2E5</string>
+				<string>1E1420681CA7CFDD00AB7EDF</string>
 				<string>1E1896941C9D939D00C2E4B9</string>
 				<string>1E98D18A1C9DF46A009A20AD</string>
 				<string>1E30925F1C9D38E1008754DD</string>
