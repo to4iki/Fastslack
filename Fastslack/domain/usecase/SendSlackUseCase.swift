@@ -19,12 +19,11 @@ final class SendSlackUseCase {
 
 extension SendSlackUseCase {
     
-    func sendSlack(message: String) -> Observable<String> {
+    func send(message: Slack.Message) -> Observable<String> {
         return Observable.create { observer in
-            self.client.sendSimpleMessage(message) { (data, error) -> Void in
+            self.client.sendMessage(message) { (data, error) -> Void in
                 if let data = data, str = NSString(data: data, encoding: NSUTF8StringEncoding) as? String {
-                    log.info(str)
-                    observer.onNext(message)
+                    observer.onNext(str)
                     observer.onCompleted()
                 }
                 

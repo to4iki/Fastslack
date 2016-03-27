@@ -39,7 +39,7 @@ extension RealmNoteRepository: NoteRepository {
 
 extension RealmNoteRepository {
     
-    func autoIncrementId() -> Int {
-        return (storage.read(Note).last?.id ?? 0) + 1
+    static func autoIncrementId() -> Int {
+        return (RealmStorage().read(Note).last?.id ?? 0) + 1
     }
 }
