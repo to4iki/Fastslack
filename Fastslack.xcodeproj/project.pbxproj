@@ -13,11 +13,11 @@
 		<key>1E04101D1CA7B93B00F85237</key>
 		<dict>
 			<key>children</key>
-			<array/>
+			<array>
+				<string>1EBA26801CA7BEC300702802</string>
+			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>dto</string>
 			<key>path</key>
 			<string>dto</string>
 			<key>sourceTree</key>
@@ -884,6 +884,28 @@ fi</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>1EBA26801CA7BEC300702802</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>NoteWriteDto.swift</string>
+			<key>path</key>
+			<string>NoteWriteDto.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1EBA26811CA7BEC300702802</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1EBA26801CA7BEC300702802</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>1EBE57D11C8578A20043C652</key>
 		<dict>
 			<key>isa</key>
@@ -1195,6 +1217,7 @@ fi</string>
 				<string>1EA5EFDE1C984890001A6C8E</string>
 				<string>1E049B0D1C9D31CE00871312</string>
 				<string>1EA5EFDA1C984646001A6C8E</string>
+				<string>1EBA26811CA7BEC300702802</string>
 				<string>1EBE57D71C857E4F0043C652</string>
 				<string>1E804A321C9D83B00074A2E5</string>
 				<string>1EA5EFDC1C98471E001A6C8E</string>
