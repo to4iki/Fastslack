@@ -56,7 +56,7 @@ extension NoteListViewController {
             tableView.tableFooterView = view
         }
         
-        tableView.registerNib(NoteTableViewCell.nib(), forCellReuseIdentifier: NoteTableViewCell.CellIdentifier)
+        tableView.registerNib(NoteListViewCell.nib(), forCellReuseIdentifier: NoteListViewCell.CellIdentifier)
         configureDynamicCellSizing()
         hideSeparator()
     }
@@ -64,8 +64,8 @@ extension NoteListViewController {
     private func bindView() {
         presenter.notes.asObservable()
             .bindTo(tableView.rx_itemsWithCellIdentifier(
-                NoteTableViewCell.CellIdentifier,
-                cellType: NoteTableViewCell.self)) { (row, element, cell) -> Void in
+                NoteListViewCell.CellIdentifier,
+                cellType: NoteListViewCell.self)) { (row, element, cell) -> Void in
                     cell.bind(element)
             }
             .addDisposableTo(disposeBag)

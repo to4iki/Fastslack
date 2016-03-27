@@ -1,5 +1,5 @@
 //
-//  NoteTableViewCell.swift
+//  NoteListViewCell.swift
 //  Fastslack
 //
 //  Created by to4iki on 3/17/16.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-final class NoteTableViewCell: UITableViewCell {
+final class NoteListViewCell: UITableViewCell {
     
     @IBOutlet private weak var createdAtLabel: UILabel!
     
     @IBOutlet private weak var bodyLabel: UILabel!
     
-    static let NibName = "NoteTableViewCell"
+    static let NibName = "NoteListViewCell"
     
     static let CellIdentifier = "NoteCellIdentifier"
     
@@ -29,7 +29,7 @@ final class NoteTableViewCell: UITableViewCell {
     }
 }
 
-extension NoteTableViewCell {
+extension NoteListViewCell {
     
     static func nib() -> UINib {
         return UINib(nibName: NibName, bundle: nil)
