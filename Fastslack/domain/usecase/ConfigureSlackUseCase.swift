@@ -14,7 +14,7 @@ final class ConfigureSlackUseCase {
     
     private let configRepository = KeyChainSlackConfigRepository()
     
-    private let messageRepository = UserDefaultsMessageRepository()
+    private let messageAttributeRepository = UserDefaultsMessageAttributeRepository()
 }
 
 // MARK: - Action
@@ -39,7 +39,7 @@ extension ConfigureSlackUseCase {
     func fetchWebHookURL() -> Observable<NSURL> {
         return Observable.create { observer in
             do {
-                if let rawUrl = try self.configRepository.getWebHookURL(), url = NSURL(string: rawUrl) {
+                if let rawUrl = try self.configRepository.get(), url = NSURL(string: rawUrl) {
                     observer.onNext(url)
                 }
                 observer.onCompleted()
@@ -51,9 +51,9 @@ extension ConfigureSlackUseCase {
         }
     }
     
-    func fetchMessage() -> Observable<Message> {
+    func fetchMessageAttribute() -> Observable<MessageAttribute> {
         return Observable.create { observer in
-            if let message = self.messageRepository.getMessage() {
+            if let message = self.messageAttributeRepository.get() {
                 observer.onNext(message)
                 observer.onCompleted()
             } else {
@@ -69,7 +69,7 @@ extension ConfigureSlackUseCase {
     func setWebHookURL(url: String) -> Observable<String> {
         return Observable.create { observer in
             do {
-                try self.configRepository.setWebHookURL(url)
+                try self.configRepository.store(url)
                 observer.onNext(url)
                 observer.onCompleted()
             } catch let error {
@@ -80,10 +80,10 @@ extension ConfigureSlackUseCase {
         }
     }
     
-    func setMessage(message: Message) -> Observable<Message> {
+    func setMessageAttribute(attribute: MessageAttribute) -> Observable<MessageAttribute> {
         return Observable.create { observer in
-            self.messageRepository.storeMessage(message)
-            observer.onNext(message)
+            self.messageAttributeRepository.store(attribute)
+            observer.onNext(attribute)
             observer.onCompleted()
             
             return NopDisposable.instance

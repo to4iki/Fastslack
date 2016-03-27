@@ -11,7 +11,7 @@ import Foundation
 /// I/F
 protocol SlackConfigRepository {
     
-    func getWebHookURL() throws -> String?
+    func get() throws -> String?
     
-    func setWebHookURL(url: String) throws
+    func store(url: String) throws
 }

@@ -18,7 +18,7 @@ final class ConfigureSlackPresenter {
     
     var webHookURL = Variable<String>("")
     
-    var message: Variable<Message>?
+    var messageAttribute: Variable<MessageAttribute>?
 }
 
 // MARK: - Presenter
@@ -45,12 +45,12 @@ extension ConfigureSlackPresenter {
     private func fetchConfig() {
         Observable.combineLatest(
             usecase.fetchWebHookURL(),
-            usecase.fetchMessage()) {
+            usecase.fetchMessageAttribute()) {
                 (url: $0, message: $1)
             }
             .subscribeNext { [unowned self] in
                 self.webHookURL.value = $0.url.absoluteString
-                self.message?.value = $0.message
+                self.messageAttribute?.value = $0.message
             }
             .addDisposableTo(disposeBag)
     }

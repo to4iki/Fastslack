@@ -10,6 +10,19 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
+		<key>1E04101D1CA7B93B00F85237</key>
+		<dict>
+			<key>children</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>dto</string>
+			<key>path</key>
+			<string>dto</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>1E049B0C1C9D31CE00871312</key>
 		<dict>
 			<key>fileEncoding</key>
@@ -99,7 +112,7 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
 			<key>path</key>
-			<string>MessageRepository.swift</string>
+			<string>MessageAttributeRepository.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -119,7 +132,7 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
 			<key>path</key>
-			<string>UserDefaultsMessageRepository.swift</string>
+			<string>UserDefaultsMessageAttributeRepository.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -611,6 +624,7 @@ fi</string>
 		<dict>
 			<key>children</key>
 			<array>
+				<string>1E04101D1CA7B93B00F85237</string>
 				<string>1ED7EED61C85765100CBE184</string>
 				<string>1ED7EED91C85768600CBE184</string>
 				<string>1ED7EED51C85763B00CBE184</string>
@@ -631,7 +645,7 @@ fi</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.swift</string>
 			<key>path</key>
-			<string>Message.swift</string>
+			<string>MessageAttribute.swift</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>

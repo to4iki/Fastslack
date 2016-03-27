@@ -25,11 +25,11 @@ extension KeyChainSlackConfigRepository: SlackConfigRepository {
         case UrlString
     }
     
-    func getWebHookURL() throws -> String? {
+    func get() throws -> String? {
         return try storage.keyChain.get(Key.UrlString.rawValue)
     }
     
-    func setWebHookURL(url: String) throws {
+    func store(url: String) throws {
         try storage.keyChain.set(url, key: Key.UrlString.rawValue)
     }
 }
