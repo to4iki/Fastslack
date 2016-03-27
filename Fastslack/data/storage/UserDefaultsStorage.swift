@@ -10,10 +10,10 @@ import Foundation
 import SwiftyUserDefaults
 
 extension DefaultsKeys {
-    
-    static let channel = DefaultsKey<String?>("channel")
-    
-    static let botName = DefaultsKey<String?>("botName")
-    
-    static let iconEmoji = DefaultsKey<String?>("iconEmoji")
+
+	static let channel = DefaultsKey<String>("channel")
+
+	static let botName = DefaultsKey<String>("botName")
+
+	static let iconEmoji = DefaultsKey<String>("iconEmoji")
 }

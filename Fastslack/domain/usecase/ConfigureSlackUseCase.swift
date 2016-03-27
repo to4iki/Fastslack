@@ -26,9 +26,16 @@ extension ConfigureSlackUseCase {
     func configure() {
         fetchWebHookURL()
             .subscribe(
-                onNext: { (url: NSURL) in Slack.configure(url.absoluteString) },
-                onError: { _ in log.error("fetch WebHookURL failure.") },
-                onCompleted: { _ in log.info("fetch WebHookURL completed.") },
+                onNext: { (url: NSURL) in
+					log.debug("fetch WebHookURL success.")
+					Slack.configure(url.absoluteString)
+				},
+                onError: { error in
+					log.error("\(error)")
+				},
+                onCompleted: { _ in
+					log.info("fetch WebHookURL completed.")
+				},
                 onDisposed: nil
             )
             .dispose()
@@ -41,8 +48,10 @@ extension ConfigureSlackUseCase {
             do {
                 if let rawUrl = try self.configRepository.get(), url = NSURL(string: rawUrl) {
                     observer.onNext(url)
-                }
-                observer.onCompleted()
+					observer.onCompleted()
+				} else {
+					observer.onError(ErrorBundle.FetchError(message: "fetch WebHookURL failure."))
+				}
             } catch let error {
                 observer.onError(error)
             }

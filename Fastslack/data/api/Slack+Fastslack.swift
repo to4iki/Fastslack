@@ -10,16 +10,16 @@ import Foundation
 import Slack
 
 extension Slack.Message {
-    
-    var defaultChannel: String {
-        return "@slackbot"
-    }
-    
-    var defaultBotName: String {
-        return "fastslack"
-    }
-    
-    var defaultIconEmoji: String {
-        return ":ghost:"
-    }
+
+	static var defaultChannel: String {
+		return "@slackbot"
+	}
+
+	static var defaultBotName: String {
+		return "fastslack"
+	}
+
+	static var defaultIconEmoji: String {
+		return ":ghost:"
+	}
 }
