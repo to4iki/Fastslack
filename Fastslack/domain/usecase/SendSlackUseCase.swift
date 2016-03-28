@@ -23,6 +23,7 @@ extension SendSlackUseCase {
         return Observable.create { observer in
             self.client.sendMessage(message) { (data, error) -> Void in
                 if let data = data, str = NSString(data: data, encoding: NSUTF8StringEncoding) as? String {
+					log.debug(str)
                     observer.onNext(str)
                     observer.onCompleted()
                 }

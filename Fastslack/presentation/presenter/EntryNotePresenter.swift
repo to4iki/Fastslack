@@ -10,54 +10,59 @@ import Foundation
 import RxSwift
 
 final class EntryNotePresenter {
-    
-    private let disposeBag = DisposeBag()
-    
-    private lazy var entryUseCase = EntryNoteUseCase()
-    
-    private lazy var sendUseCase = SendSlackUseCase()
-    
-    private lazy var configureSlackUseCase = ConfigureSlackUseCase()
-    
-    private var messageAttribute: MessageAttribute?
+
+	private let disposeBag = DisposeBag()
+
+	private let sendRetryMaxAttemptCount = 1
+
+	private lazy var entryUseCase = EntryNoteUseCase()
+
+	private lazy var sendUseCase = SendSlackUseCase()
+
+	private lazy var configureSlackUseCase = ConfigureSlackUseCase()
+
+	private(set) var body = Variable<String>("")
+
+	private var messageAttribute: MessageAttribute?
 }
 
 // MARK: - Presenter
 
 extension EntryNotePresenter: Presenter {
-    
-    func viewWillAppear(animated: Bool) {
-        fetchAttribute()
-    }
+
+	func viewWillAppear(animated: Bool) {
+		fetchAttribute()
+	}
 }
 
 // MARK: - Action
 
 extension EntryNotePresenter {
-    
-    func send(text: String) {
-        guard let attr = messageAttribute else {
-            fatalError("setup attribute failure.")
-        }
-        
-        let dto = NoteWriteDto(body: text)
-        
-        sendUseCase.send(dto.convertSlackMessage(attr))
-            .retry(3)
-            .flatMap { _ -> Observable<Note> in
-                self.entryUseCase.entry(dto.convertNote())
-            }
-            .subscribeCompleted {
-                log.info("send messsage completed.")
-            }
-            .addDisposableTo(disposeBag)
-    }
-    
-    private func fetchAttribute() {
-        configureSlackUseCase.fetchMessageAttribute()
-            .subscribeNext { [unowned self] in
-                self.messageAttribute = $0
-            }
-            .addDisposableTo(disposeBag)
-    }
+
+	func send() {
+		guard let attr = messageAttribute else {
+			fatalError("set attribute failure.")
+		}
+
+		let dto = NoteWriteDto(body: body.value)
+
+		sendUseCase.send(dto.convertSlackMessage(attr))
+			.retry(sendRetryMaxAttemptCount)
+			.flatMap { _ -> Observable<Note> in
+				self.entryUseCase.entry(dto.convertNote())
+			}
+			.subscribeCompleted { [unowned self] in
+				self.body.value = ""
+				log.info("send messsage completed.")
+			}
+			.addDisposableTo(disposeBag)
+	}
+
+	private func fetchAttribute() {
+		configureSlackUseCase.fetchMessageAttribute()
+			.subscribeNext { [unowned self] in
+				self.messageAttribute = $0
+			}
+			.addDisposableTo(disposeBag)
+	}
 }

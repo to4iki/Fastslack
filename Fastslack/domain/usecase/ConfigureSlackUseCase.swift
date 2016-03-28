@@ -27,7 +27,6 @@ extension ConfigureSlackUseCase {
         fetchWebHookURL()
             .subscribe(
                 onNext: { (url: NSURL) in
-					log.debug("fetch WebHookURL success.")
 					Slack.configure(url.absoluteString)
 				},
                 onError: { error in
