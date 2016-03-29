@@ -88,28 +88,28 @@ extension SettingViewController {
 			.filter { !$0.isEmpty }
 			.subscribeNext { [unowned self] text in
 				self.presenter.webHookURL.value = text
-		}
+			}
 			.addDisposableTo(disposeBag)
 
 		chanelTextField.rx_text
 			.filter { !$0.isEmpty }
 			.subscribeNext { [unowned self] text in
 				self.presenter.channel.value = text
-		}
+			}
 			.addDisposableTo(disposeBag)
 
 		botNameTextField.rx_text
 			.filter { !$0.isEmpty }
 			.subscribeNext { [unowned self] text in
 				self.presenter.botName.value = text
-		}
+			}
 			.addDisposableTo(disposeBag)
 
 		iconEmojiTextField.rx_text
 			.filter { !$0.isEmpty }
 			.subscribeNext { [unowned self] text in
 				self.presenter.iconEmoji.value = text
-		}
+			}
 			.addDisposableTo(disposeBag)
 	}
 }
