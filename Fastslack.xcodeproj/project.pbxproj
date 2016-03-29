@@ -111,8 +111,6 @@
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>api</string>
 			<key>path</key>
 			<string>api</string>
 			<key>sourceTree</key>
@@ -457,6 +455,7 @@
 			<array>
 				<string>1E5323881C9AEF0800E0693C</string>
 				<string>1EBE57D61C857E4F0043C652</string>
+				<string>1E7D80A11CAAC4E100A0B32D</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -654,6 +653,26 @@ fi</string>
 			<string>storage</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E7D80A11CAAC4E100A0B32D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SlackColor.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E7D80A21CAAC4E100A0B32D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1E7D80A11CAAC4E100A0B32D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>1E7EF90C1C97035C004F7DED</key>
 		<dict>
@@ -1253,6 +1272,7 @@ fi</string>
 				<string>1EA5EFDA1C984646001A6C8E</string>
 				<string>1EBA26811CA7BEC300702802</string>
 				<string>1EBE57D71C857E4F0043C652</string>
+				<string>1E7D80A21CAAC4E100A0B32D</string>
 				<string>1E804A321C9D83B00074A2E5</string>
 				<string>1EA5EFDC1C98471E001A6C8E</string>
 				<string>1E804A341C9D83E30074A2E5</string>
