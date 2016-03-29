@@ -7,19 +7,17 @@
 //
 
 import UIKit
-import Slack
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-    var window: UIWindow?
-    
-    private let configureSlackUseCase = ConfigureSlackUseCase()
-    
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        configureSlackUseCase.configure()
-        
-        return true
-    }
+
+	var window: UIWindow?
+
+	private let configureSlackUseCase = ConfigureSlackUseCase()
+
+	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+		configureSlackUseCase.configure()
+
+		return true
+	}
 }

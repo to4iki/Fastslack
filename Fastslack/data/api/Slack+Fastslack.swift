@@ -12,7 +12,7 @@ import Slack
 extension Slack.Message {
 
 	static var defaultChannel: String {
-		return "@slackbot"
+		return "#general"
 	}
 
 	static var defaultBotName: String {
@@ -20,6 +20,6 @@ extension Slack.Message {
 	}
 
 	static var defaultIconEmoji: String {
-		return ":ghost:"
+		return ":slack:"
 	}
 }

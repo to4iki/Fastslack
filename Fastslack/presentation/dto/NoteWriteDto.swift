@@ -35,7 +35,7 @@ extension NoteWriteDto {
 			m.channel(attribute.channel)
 			m.botName(attribute.botName)
 			m.iconEmoji(attribute.iconEmoji)
-			m.text(self.body, linkEnable: true)
+			m.text(self.body)
 		}
 	}
 }
