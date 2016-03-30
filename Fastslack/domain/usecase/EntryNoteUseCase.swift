@@ -11,7 +11,11 @@ import RxSwift
 
 final class EntryNoteUseCase {
     
-    private let repository = RealmNoteRepository()
+	private let repository: NoteRepository
+
+	init(repository: NoteRepository = RealmNoteRepository()) {
+		self.repository = repository
+	}
 }
 
 // MARK: - Action
