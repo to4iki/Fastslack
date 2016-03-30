@@ -18,7 +18,7 @@ final class FetchNoteUseCase {
 
 extension FetchNoteUseCase {
     
-    func fetchAll() -> Observable<Note> {
-        return repository.findAll().toObservable()
+	func fetchAll(order: Order = .Desc) -> Observable<Note> {
+        return repository.findAll(order).toObservable()
     }
 }

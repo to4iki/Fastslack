@@ -22,8 +22,10 @@ struct RealmNoteRepository {
 
 extension RealmNoteRepository: NoteRepository {
     
-    func findAll() -> [Note] {
-        return storage.read(Note).reduce([], combine: { $0 + [$1] })
+	func findAll(order: Order = .Desc) -> [Note] {
+		return storage.read(Note)
+			.sorted([order.toSortDescriptor()])
+			.reduce([], combine: { $0 + [$1] })
     }
     
     func store(note: Note) throws {

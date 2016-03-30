@@ -12,7 +12,7 @@ import RealmSwift
 /// I/F
 protocol NoteRepository {
     
-    func findAll() -> [Note]
+	func findAll(order: Order) -> [Note]
     
     func store(note: Note) throws
     
