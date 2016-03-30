@@ -13,7 +13,7 @@ struct RealmStorage {
     
     private let realm: Realm
     
-    init(persistent: Persistent = .InMemory) {
+    init(persistent: Persistent = .Disc) {
         self.realm = persistent.toRealm()
     }
 }

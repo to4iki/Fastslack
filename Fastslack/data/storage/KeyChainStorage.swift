@@ -14,7 +14,7 @@ struct KeyChainStorage {
     let keyChain: Keychain
     
     init(persistent: Persistent = .Default) {
-        self.keyChain = persistent.toKeyChai()
+        self.keyChain = persistent.toKeyChain()
     }
 }
 
@@ -26,7 +26,7 @@ extension KeyChainStorage {
         case Default
         case Test
         
-        private func toKeyChai() -> Keychain {
+        private func toKeyChain() -> Keychain {
             switch self {
             case .Default:
                 return Keychain()
