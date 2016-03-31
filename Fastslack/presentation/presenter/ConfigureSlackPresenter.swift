@@ -14,7 +14,9 @@ final class ConfigureSlackPresenter {
 
 	private let disposeBag = DisposeBag()
 
-	private lazy var usecase = ConfigureSlackUseCase()
+	private lazy var configureSlackUseCase = ConfigureSlackUseCase()
+
+	private lazy var deleteNoteUseCase = DeleteNoteUseCase()
 
 	private(set) var webHookURL = Variable<String>("")
 
@@ -49,7 +51,7 @@ extension ConfigureSlackPresenter {
 
 	private func fetchConfig() {
 		Observable
-			.zip(usecase.fetchWebHookURL(), usecase.fetchMessageAttribute()) {
+			.zip(configureSlackUseCase.fetchWebHookURL(), configureSlackUseCase.fetchMessageAttribute()) {
 				(url: $0, message: $1)
 			}
 			.subscribeNext { [unowned self] in
@@ -62,7 +64,7 @@ extension ConfigureSlackPresenter {
 	}
 
 	private func storeWebHookURL() {
-		usecase.setWebHookURL(webHookURL.value)
+		configureSlackUseCase.setWebHookURL(webHookURL.value)
 			.subscribeCompleted {
 				log.info("store webHookURL completed.")
 			}
@@ -70,7 +72,9 @@ extension ConfigureSlackPresenter {
 	}
 
 	private func storeMessaegAttribute() {
-		usecase.setMessageAttribute(MessageAttribute(channel: channel.value, botName: botName.value, iconEmoji: iconEmoji.value))
+		let attr = MessageAttribute(channel: channel.value, botName: botName.value, iconEmoji: iconEmoji.value)
+
+		configureSlackUseCase.setMessageAttribute(attr)
 			.subscribeCompleted {
 				log.info("store messageAttribute completed.")
 			}

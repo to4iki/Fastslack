@@ -56,4 +56,16 @@ extension RealmStorage {
             realm.delete(object)
         }
     }
+
+	func deleteAll<A: Object>(type: A.Type) throws {
+		try realm.write {
+			realm.delete(read(type))
+		}
+	}
+
+	func purge() throws {
+		try realm.write {
+			realm.deleteAll()
+		}
+	}
 }

@@ -17,4 +17,6 @@ protocol NoteRepository {
     func store(note: Note) throws
     
     func delete(note: Note) throws
+
+	func deleteAll() throws
 }

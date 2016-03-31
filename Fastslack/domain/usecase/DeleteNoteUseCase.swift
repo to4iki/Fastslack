@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 final class DeleteNoteUseCase {
-    
+
 	private let repository: NoteRepository
 
 	init(repository: NoteRepository = RealmNoteRepository()) {
@@ -21,18 +21,32 @@ final class DeleteNoteUseCase {
 // MARK: - Action
 
 extension DeleteNoteUseCase {
-    
-    func delete(note: Note) -> Observable<Bool> {
-        return Observable.create { observer in
-            do {
-                try self.repository.delete(note)
-                observer.onNext(true)
-                observer.onCompleted()
-            } catch {
-                observer.onError(ErrorBundle.DeleteError(message: "delete note failure."))
-            }
-            
-            return NopDisposable.instance
-        }
-    }
+
+	func delete(note: Note) -> Observable<Bool> {
+		return Observable.create { observer in
+			do {
+				try self.repository.delete(note)
+				observer.onNext(true)
+				observer.onCompleted()
+			} catch {
+				observer.onError(ErrorBundle.DeleteError(message: "delete note failure."))
+			}
+
+			return NopDisposable.instance
+		}
+	}
+
+	func deleteAll() -> Observable<Bool> {
+		return Observable.create { observer in
+			do {
+				try self.repository.deleteAll()
+				observer.onNext(true)
+				observer.onCompleted()
+			} catch {
+				observer.onError(ErrorBundle.DeleteError(message: "deleteAll note failure."))
+			}
+
+			return NopDisposable.instance
+		}
+	}
 }
