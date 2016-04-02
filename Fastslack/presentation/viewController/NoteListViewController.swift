@@ -71,7 +71,7 @@ extension NoteListViewController {
 			.bindTo(tableView.rx_itemsWithCellIdentifier(
 				NoteListViewCell.CellIdentifier,
 				cellType: NoteListViewCell.self)) { (row, element, cell) -> Void in
-					cell.bind(element)
+					cell.bind(NoteReadDto(entity: element))
 			}
 			.addDisposableTo(disposeBag)
 
