@@ -49,4 +49,13 @@ extension DeleteNoteUseCase {
 			return NopDisposable.instance
 		}
 	}
+
+	func deleteAllExpired() -> Observable<Bool> {
+		return repository.findAll(.Asc).toObservable()
+			.filter { (note: Note) in
+				note.expired
+			}.flatMap { (note: Note) in
+				self.delete(note)
+		}
+	}
 }
