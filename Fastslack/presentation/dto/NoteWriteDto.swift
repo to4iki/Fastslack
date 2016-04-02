@@ -11,11 +11,7 @@ import Slack
 
 struct NoteWriteDto {
 
-	private let body: String
-
-	init(body: String) {
-		self.body = body
-	}
+	let body: String
 }
 
 // MARK: - Converter

@@ -14,6 +14,7 @@
 		<dict>
 			<key>children</key>
 			<array>
+				<string>1E47F0111CAFEF2E007F0E4E</string>
 				<string>1EBA26801CA7BEC300702802</string>
 			</array>
 			<key>isa</key>
@@ -426,6 +427,26 @@
 		<dict>
 			<key>fileRef</key>
 			<string>1E3676BD1C9C1AD8008A4EF6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1E47F0111CAFEF2E007F0E4E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>NoteReadDto.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E47F0121CAFEF2E007F0E4E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1E47F0111CAFEF2E007F0E4E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1277,6 +1298,7 @@ fi</string>
 				<string>1EDB4FD51C99A68200E5A88F</string>
 				<string>1E2FFFD21C95C75D00E4D52F</string>
 				<string>1EF85E9F1C8342A10092A3CF</string>
+				<string>1E47F0121CAFEF2E007F0E4E</string>
 				<string>1E5323891C9AEF0800E0693C</string>
 				<string>1E1896921C9D917700C2E4B9</string>
 				<string>1E2ACC901C9AE4E200341B75</string>
