@@ -430,6 +430,61 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>1E4543D31CB00B9F00C2B9BE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppNotification.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E4543D41CB00B9F00C2B9BE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1E4543D31CB00B9F00C2B9BE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1E4543D71CB00EEB00C2B9BE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppNavigation.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E4543D81CB00EEB00C2B9BE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1E4543D71CB00EEB00C2B9BE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1E4543D91CB0173E00C2B9BE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1E4543D31CB00B9F00C2B9BE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>notification</string>
+			<key>path</key>
+			<string>notification</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>1E47F0111CAFEF2E007F0E4E</key>
 		<dict>
 			<key>fileEncoding</key>
@@ -721,6 +776,7 @@ fi</string>
 			<key>children</key>
 			<array>
 				<string>1E04101D1CA7B93B00F85237</string>
+				<string>1E4543D91CB0173E00C2B9BE</string>
 				<string>1ED7EED61C85765100CBE184</string>
 				<string>1ED7EED91C85768600CBE184</string>
 				<string>1ED7EED51C85763B00CBE184</string>
@@ -1107,6 +1163,7 @@ fi</string>
 		<dict>
 			<key>children</key>
 			<array>
+				<string>1E4543D71CB00EEB00C2B9BE</string>
 				<string>1EF85EA31C8342A10092A3CF</string>
 				<string>1EF85EA51C8342A10092A3CF</string>
 				<string>1EF85EA01C8342A10092A3CF</string>
@@ -1302,6 +1359,7 @@ fi</string>
 				<string>1E5323891C9AEF0800E0693C</string>
 				<string>1E1896921C9D917700C2E4B9</string>
 				<string>1E2ACC901C9AE4E200341B75</string>
+				<string>1E4543D81CB00EEB00C2B9BE</string>
 				<string>1EAAF8641C89D9180095A4B7</string>
 				<string>1EF85E9D1C8342A10092A3CF</string>
 				<string>1E2FFFD01C95C58500E4D52F</string>
@@ -1322,6 +1380,7 @@ fi</string>
 				<string>1E1420681CA7CFDD00AB7EDF</string>
 				<string>1E1896941C9D939D00C2E4B9</string>
 				<string>1E51B5F61CAC2BED004B2F10</string>
+				<string>1E4543D41CB00B9F00C2B9BE</string>
 				<string>1E98D18A1C9DF46A009A20AD</string>
 				<string>1E30925F1C9D38E1008754DD</string>
 				<string>1E1C441E1C9C28FD00DEC2A0</string>

@@ -13,18 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
-	private let configureSlackUseCase = ConfigureSlackUseCase()
-
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-		setupNavigation()
-		configureSlackUseCase.configure()
+		AppNavigation.setup()
+		AppNotification.subscribe()
 
 		return true
-	}
-
-	private func setupNavigation() {
-		UINavigationBar.appearance().barTintColor = SlackColor.purple
-		UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
 	}
 }
