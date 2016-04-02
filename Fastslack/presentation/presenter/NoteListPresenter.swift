@@ -25,7 +25,7 @@ final class NoteListPresenter {
 extension NoteListPresenter: Presenter {
     
     func viewDidLoad() {
-        fetchAllNote()
+        fetchNonExpiredNote()
     }
 }
 
@@ -33,8 +33,11 @@ extension NoteListPresenter: Presenter {
 
 extension NoteListPresenter {
     
-    private func fetchAllNote() {
+    private func fetchNonExpiredNote() {
         fetchUseCase.fetchAll()
+			.filter { (note: Note) in
+				!note.expired
+			}
             .subscribeNext { [unowned self] (note: Note) in
                 self.notes.value.append(note)
             }

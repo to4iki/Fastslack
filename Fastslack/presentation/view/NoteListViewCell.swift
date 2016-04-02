@@ -35,8 +35,8 @@ extension NoteListViewCell {
         return UINib(nibName: NibName, bundle: nil)
     }
     
-    func bind(note: Note) {
-        createdAtLabel.text = dateFormatter.stringFromDate(note.createdAt)
+    func bind(note: NoteReadDto) {
+        createdAtLabel.text = note.createdAt
         bodyLabel.text = note.body
     }
 }
