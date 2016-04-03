@@ -137,7 +137,7 @@ extension NoteListViewController {
 				log.debug(type)
 
 				if type == SendNoteAgainActivity.TypeName {
-					// TODO: refresh
+					self.presenter.refetch()
 				}
 
 			case .Failure(let error):

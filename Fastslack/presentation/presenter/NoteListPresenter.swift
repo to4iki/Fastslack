@@ -46,7 +46,12 @@ extension NoteListPresenter {
             }
             .addDisposableTo(disposeBag)
     }
-    
+
+	func refetch() {
+		notes.value.removeAll()
+		fetchNonExpiredNote()
+	}
+
     func deleteNoteBy(index: Int) {
 		let note = notes.value[index].convertNote()
 		
