@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import Slack
 
 final class EntryNotePresenter {
 
@@ -44,12 +45,33 @@ extension EntryNotePresenter {
 			fatalError("set attribute failure.")
 		}
 
-		let dto = NoteWriteDto(body: body.value)
+		let writer = NoteWriteDto(body: body.value)
 
-		sendUseCase.send(dto.convertSlackMessage(attr))
+		sendUseCase.send(writer.convertSlackMessage(attr))
 			.retry(sendRetryMaxAttemptCount)
 			.flatMap { _ -> Observable<Note> in
-				self.entryUseCase.entry(dto.convertNote())
+				self.entryUseCase.entry(writer.convertNote())
+			}
+			.subscribeCompleted { [unowned self] in
+				self.body.value = ""
+				log.info("send messsage completed.")
+			}
+			.addDisposableTo(disposeBag)
+	}
+
+	func forceSend(text: String) {
+		let writer = NoteWriteDto(body: text)
+
+		configureSlackUseCase.fetchMessageAttribute()
+			.map { (attr: MessageAttribute) in
+				writer.convertSlackMessage(attr)
+			}
+			.flatMap { [unowned self](message: Slack.Message) in
+				self.sendUseCase.send(message)
+			}
+			.retry(sendRetryMaxAttemptCount)
+			.flatMap { _ -> Observable<Note> in
+				self.entryUseCase.entry(writer.convertNote())
 			}
 			.subscribeCompleted { [unowned self] in
 				self.body.value = ""
