@@ -115,15 +115,9 @@ extension NoteListViewController: UIGestureRecognizerDelegate {
 		let point = recognizer.locationInView(tableView)
 		let indexPath = tableView.indexPathForRowAtPoint(point)
 
-		if let row = indexPath?.row where recognizer.state == UIGestureRecognizerState.Began {
-			AppActivity(text: presenter.notes.value[row].body).show { (result: Result<String, NSError>) -> Void in
-				switch result {
-				case .Success(let type):
-					log.debug(type)
-				case .Failure(let error):
-					log.error(error.localizedDescription)
-				}
-			}
+		if  recognizer.state == UIGestureRecognizerState.Began,
+			let item = indexPath.map({ ActivityItem(text: presenter.notes.value[$0.row].body) }) {
+			showActivity(item)
 		}
 	}
 }
@@ -134,6 +128,22 @@ extension NoteListViewController {
 
 	@IBAction func onClickCloseButton(sender: UIBarButtonItem) {
 		dismissViewControllerAnimated(true, completion: closeCompletionHandler)
+	}
+
+	private func showActivity(item: ActivityItem) {
+		AppActivity(item: item).show { (result: Result<String, NSError>) -> Void in
+			switch result {
+			case .Success(let type):
+				log.debug(type)
+
+				if type == SendNoteAgainActivity.TypeName {
+					// TODO: refresh
+				}
+
+			case .Failure(let error):
+				log.error(error.localizedDescription)
+			}
+		}
 	}
 }
 
