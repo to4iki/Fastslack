@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Result
 
 final class NoteListViewController: UIViewController {
 
@@ -114,8 +115,15 @@ extension NoteListViewController: UIGestureRecognizerDelegate {
 		let point = recognizer.locationInView(tableView)
 		let indexPath = tableView.indexPathForRowAtPoint(point)
 
-		if recognizer.state == UIGestureRecognizerState.Began {
-			// TODO: Show ActionBar
+		if let row = indexPath?.row where recognizer.state == UIGestureRecognizerState.Began {
+			AppActivity(text: presenter.notes.value[row].body).show { (result: Result<String, NSError>) -> Void in
+				switch result {
+				case .Success(let type):
+					log.debug(type)
+				case .Failure(let error):
+					log.error(error.localizedDescription)
+				}
+			}
 		}
 	}
 }
