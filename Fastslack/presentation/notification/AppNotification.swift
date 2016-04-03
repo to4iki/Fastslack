@@ -24,12 +24,12 @@ final class AppNotification {
 
     private init() { }
 
-    private static let shredInstance = AppNotification()
+    private static let sharedInstance = AppNotification()
 
     // MARK: Setup
 
     static func subscribe() {
-        let i = shredInstance
+        let i = sharedInstance
         i.bindDidFinishLaunching()
         i.bindDidBecomeActive()
         i.bindDidEnterBackground()
