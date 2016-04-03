@@ -853,6 +853,7 @@ fi</string>
 			<array>
 				<string>1E9897E61CB0B19D0071B2BC</string>
 				<string>1E4543D71CB00EEB00C2B9BE</string>
+				<string>1EC4F2BA1CB0FA39001931CE</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -1182,6 +1183,61 @@ fi</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>1EC4F2BA1CB0FA39001931CE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SendNoteAgainActivity.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1EC4F2BB1CB0FA39001931CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1EC4F2BA1CB0FA39001931CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1EC4F2BC1CB102E7001931CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1EC4F2BD1CB102FC001931CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>property</string>
+			<key>path</key>
+			<string>property</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1EC4F2BD1CB102FC001931CE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ActivityItem.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1EC4F2BE1CB102FC001931CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1EC4F2BD1CB102FC001931CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>1ED7EED51C85763B00CBE184</key>
 		<dict>
 			<key>children</key>
@@ -1235,6 +1291,7 @@ fi</string>
 			<array>
 				<string>1E1420661CA7CFB000AB7EDF</string>
 				<string>1E9897E91CB0C4780071B2BC</string>
+				<string>1EC4F2BC1CB102E7001931CE</string>
 				<string>1EDB4FD61C99AFD300E5A88F</string>
 				<string>1E7C61ED1C88AA5B00D8490A</string>
 				<string>1E53238A1C9AF38A00E0693C</string>
@@ -1450,6 +1507,7 @@ fi</string>
 				<string>1E4543D81CB00EEB00C2B9BE</string>
 				<string>1E9897E71CB0B19D0071B2BC</string>
 				<string>1EAAF8641C89D9180095A4B7</string>
+				<string>1EC4F2BB1CB0FA39001931CE</string>
 				<string>1EF85E9D1C8342A10092A3CF</string>
 				<string>1E2FFFD01C95C58500E4D52F</string>
 				<string>1EAAF8621C89C9770095A4B7</string>
@@ -1476,6 +1534,7 @@ fi</string>
 				<string>1E1C441E1C9C28FD00DEC2A0</string>
 				<string>1E3092611C9D39C9008754DD</string>
 				<string>1EDB4FD11C999FE400E5A88F</string>
+				<string>1EC4F2BE1CB102FC001931CE</string>
 				<string>1EAAF85C1C89C4180095A4B7</string>
 				<string>1E119B5C1CA79EB700A2D754</string>
 			</array>

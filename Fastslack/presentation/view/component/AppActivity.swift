@@ -28,12 +28,10 @@ extension AppActivity {
 
 	func show(completedWithItemsHandler: Result<String, NSError> -> Void) {
 		activityViewController.completionWithItemsHandler = { (type: String?, completed: Bool, items: [AnyObject]?, error: NSError?) in
-			if completed {
-				if let error = error {
-					completedWithItemsHandler(.Failure(error))
-				} else if let type = type {
-					completedWithItemsHandler(.Success(type))
-				}
+			if let error = error {
+				completedWithItemsHandler(.Failure(error))
+			} else if let type = type {
+				completedWithItemsHandler(.Success(type))
 			}
 		}
 
