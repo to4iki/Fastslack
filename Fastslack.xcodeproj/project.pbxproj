@@ -478,8 +478,6 @@
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>notification</string>
 			<key>path</key>
 			<string>notification</string>
 			<key>sourceTree</key>
@@ -502,6 +500,26 @@
 		<dict>
 			<key>fileRef</key>
 			<string>1E47F0111CAFEF2E007F0E4E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1E501FA91CB0F667000D9A89</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Result.framework</string>
+			<key>path</key>
+			<string>Carthage/Build/iOS/Result.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E501FAA1CB0F667000D9A89</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1E501FA91CB0F667000D9A89</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -577,6 +595,7 @@
 				<string>$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework</string>
 				<string>$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework</string>
 				<string>$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework</string>
+				<string>$(SRCROOT)/Carthage/Build/iOS/Result.framework</string>
 			</array>
 			<key>isa</key>
 			<string>PBXShellScriptBuildPhase</string>
@@ -825,6 +844,73 @@ fi</string>
 		<dict>
 			<key>fileRef</key>
 			<string>1E804A331C9D83E30074A2E5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1E9897E51CB0B1450071B2BC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1E9897E61CB0B19D0071B2BC</string>
+				<string>1E4543D71CB00EEB00C2B9BE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>component</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E9897E61CB0B19D0071B2BC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppActivity.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E9897E71CB0B19D0071B2BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1E9897E61CB0B19D0071B2BC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1E9897E91CB0C4780071B2BC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1E9897EA1CB0C4990071B2BC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>extension</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E9897EA1CB0C4990071B2BC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>UIApplication+Fastslack.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E9897EB1CB0C4990071B2BC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1E9897EA1CB0C4990071B2BC</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1148,6 +1234,7 @@ fi</string>
 			<key>children</key>
 			<array>
 				<string>1E1420661CA7CFB000AB7EDF</string>
+				<string>1E9897E91CB0C4780071B2BC</string>
 				<string>1EDB4FD61C99AFD300E5A88F</string>
 				<string>1E7C61ED1C88AA5B00D8490A</string>
 				<string>1E53238A1C9AF38A00E0693C</string>
@@ -1163,7 +1250,7 @@ fi</string>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>1E4543D71CB00EEB00C2B9BE</string>
+				<string>1E9897E51CB0B1450071B2BC</string>
 				<string>1EF85EA31C8342A10092A3CF</string>
 				<string>1EF85EA51C8342A10092A3CF</string>
 				<string>1EF85EA01C8342A10092A3CF</string>
@@ -1247,6 +1334,7 @@ fi</string>
 				<string>1E1A67661C9C62A300A96E9C</string>
 				<string>1E7C61E71C88A8CD00D8490A</string>
 				<string>1E7C61E81C88A8CD00D8490A</string>
+				<string>1E501FA91CB0F667000D9A89</string>
 				<string>1E0B11991C99B85D007BBE25</string>
 				<string>1E7860FD1C89FF4E00DED8D9</string>
 				<string>1E7860FE1C89FF4E00DED8D9</string>
@@ -1360,6 +1448,7 @@ fi</string>
 				<string>1E1896921C9D917700C2E4B9</string>
 				<string>1E2ACC901C9AE4E200341B75</string>
 				<string>1E4543D81CB00EEB00C2B9BE</string>
+				<string>1E9897E71CB0B19D0071B2BC</string>
 				<string>1EAAF8641C89D9180095A4B7</string>
 				<string>1EF85E9D1C8342A10092A3CF</string>
 				<string>1E2FFFD01C95C58500E4D52F</string>
@@ -1382,6 +1471,7 @@ fi</string>
 				<string>1E51B5F61CAC2BED004B2F10</string>
 				<string>1E4543D41CB00B9F00C2B9BE</string>
 				<string>1E98D18A1C9DF46A009A20AD</string>
+				<string>1E9897EB1CB0C4990071B2BC</string>
 				<string>1E30925F1C9D38E1008754DD</string>
 				<string>1E1C441E1C9C28FD00DEC2A0</string>
 				<string>1E3092611C9D39C9008754DD</string>
@@ -1400,6 +1490,7 @@ fi</string>
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
+				<string>1E501FAA1CB0F667000D9A89</string>
 				<string>1E7861011C89FF7C00DED8D9</string>
 				<string>1E1A67691C9C62D100A96E9C</string>
 				<string>1E1A67671C9C62A300A96E9C</string>
