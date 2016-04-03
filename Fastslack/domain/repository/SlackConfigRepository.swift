@@ -10,8 +10,8 @@ import Foundation
 
 /// I/F
 protocol SlackConfigRepository {
-    
+
     func get() throws -> String?
-    
+
     func store(url: String) throws
 }

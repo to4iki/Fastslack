@@ -11,27 +11,27 @@ import Slack
 
 struct NoteWriteDto {
 
-	let body: String
+    let body: String
 }
 
 // MARK: - Converter
 
 extension NoteWriteDto {
 
-	func convertNote(id: Int = RealmNoteRepository.autoIncrementId()) -> Note {
-		let note = Note()
-		note.id = id
-		note.body = body
+    func convertNote(id: Int = RealmNoteRepository.autoIncrementId()) -> Note {
+        let note = Note()
+        note.id = id
+        note.body = body
 
-		return note
-	}
+        return note
+    }
 
-	func convertSlackMessage(attribute: MessageAttribute) -> Slack.Message {
-		return Slack.Message.build { (m: Slack.Message) in
-			m.channel(attribute.channel)
-			m.botName(attribute.botName)
-			m.iconEmoji(attribute.iconEmoji)
-			m.text(self.body)
-		}
-	}
+    func convertSlackMessage(attribute: MessageAttribute) -> Slack.Message {
+        return Slack.Message.build { (m: Slack.Message) in
+            m.channel(attribute.channel)
+            m.botName(attribute.botName)
+            m.iconEmoji(attribute.iconEmoji)
+            m.text(self.body)
+        }
+    }
 }

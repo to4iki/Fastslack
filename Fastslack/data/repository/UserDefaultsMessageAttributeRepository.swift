@@ -12,14 +12,14 @@ import SwiftyUserDefaults
 // MARK: - MessageAttributeRepository
 
 struct UserDefaultsMessageAttributeRepository: MessageAttributeRepository {
-    
+
     func get() -> MessageAttribute? {
         let channel = Defaults[.channel]
         let botName = Defaults[.botName]
         let iconEmoji = Defaults[.iconEmoji]
         return MessageAttribute(channel: channel, botName: botName, iconEmoji: iconEmoji)
     }
-    
+
     func store(attribute: MessageAttribute) {
         Defaults[.channel] = attribute.channel
         Defaults[.botName] = attribute.botName

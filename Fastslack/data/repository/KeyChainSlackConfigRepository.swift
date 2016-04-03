@@ -9,9 +9,9 @@
 import Foundation
 
 struct KeyChainSlackConfigRepository {
-    
+
     private let storage: KeyChainStorage
-    
+
     init(storage: KeyChainStorage = KeyChainStorage()) {
         self.storage = storage
     }
@@ -20,15 +20,15 @@ struct KeyChainSlackConfigRepository {
 // MARK: - SlackConfigRepository
 
 extension KeyChainSlackConfigRepository: SlackConfigRepository {
-    
+
     private enum Key: String {
         case UrlString
     }
-    
+
     func get() throws -> String? {
         return try storage.keyChain.get(Key.UrlString.rawValue)
     }
-    
+
     func store(url: String) throws {
         try storage.keyChain.set(url, key: Key.UrlString.rawValue)
     }

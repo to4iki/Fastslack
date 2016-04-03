@@ -10,7 +10,7 @@ import XCGLogger
 
 let log: XCGLogger = {
     let log = XCGLogger.defaultInstance()
-    
+
     // color
     log.xcodeColorsEnabled = true // Or set the XcodeColors environment variable in your scheme to YES
     log.xcodeColors = [
@@ -21,13 +21,13 @@ let log: XCGLogger = {
         .Error: .red,
         .Severe: .blue
     ]
-    
+
     // date
     let dateFormatter = NSDateFormatter()
     dateFormatter.dateFormat = "MM/dd/yyyy hh:mma"
     dateFormatter.locale = NSLocale.currentLocale()
     log.dateFormatter = dateFormatter
-    
+
     // setup
     log.setup(
         .Debug,
@@ -37,6 +37,6 @@ let log: XCGLogger = {
         showLineNumbers: true,
         writeToFile: nil
     )
-    
+
     return log
 }()

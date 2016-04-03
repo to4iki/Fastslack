@@ -8,4 +8,4 @@
 
 import Foundation
 
-protocol ValueObject: CustomStringConvertible, Equatable {}
+protocol ValueObject: CustomStringConvertible, Equatable { }

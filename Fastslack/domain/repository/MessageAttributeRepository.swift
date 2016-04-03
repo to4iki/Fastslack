@@ -10,8 +10,8 @@ import Foundation
 
 /// I/F
 protocol MessageAttributeRepository {
-    
+
     func get() -> MessageAttribute?
-    
+
     func store(attribute: MessageAttribute)
 }

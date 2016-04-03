@@ -11,28 +11,28 @@ import RxSwift
 import Slack
 
 final class SendSlackUseCase {
-    
+
     private let client = Slack.sharedInstance
 }
 
 // MARK: - Action
 
 extension SendSlackUseCase {
-    
+
     func send(message: Slack.Message) -> Observable<String> {
         return Observable.create { observer in
             self.client.sendMessage(message) { (data, error) -> Void in
                 if let data = data, str = NSString(data: data, encoding: NSUTF8StringEncoding) as? String {
-					log.debug(str)
+                    log.debug(str)
                     observer.onNext(str)
                     observer.onCompleted()
                 }
-                
+
                 if let error = error {
                     observer.onError(ErrorBundle.SendError(message: error.localizedDescription))
                 }
             }
-            
+
             return NopDisposable.instance
         }
     }

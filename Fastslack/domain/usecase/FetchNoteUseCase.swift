@@ -10,19 +10,19 @@ import Foundation
 import RxSwift
 
 final class FetchNoteUseCase {
-    
-	private let repository: NoteRepository
 
-	init(repository: NoteRepository = RealmNoteRepository()) {
-		self.repository = repository
-	}
+    private let repository: NoteRepository
+
+    init(repository: NoteRepository = RealmNoteRepository()) {
+        self.repository = repository
+    }
 }
 
 // MARK: - Action
 
 extension FetchNoteUseCase {
-    
-	func fetchAll(order: Order = .Desc) -> Observable<Note> {
+
+    func fetchAll(order: Order = .Desc) -> Observable<Note> {
         return repository.findAll(order).toObservable()
     }
 }

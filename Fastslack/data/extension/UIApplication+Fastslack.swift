@@ -10,14 +10,14 @@ import UIKit
 
 extension UIApplication {
 
-	func topViewController() -> UIViewController? {
-		guard var topViewController = UIApplication.sharedApplication().keyWindow?.rootViewController else {
-			return nil
-		}
-		
-		while case .Some = topViewController.presentedViewController {
-			topViewController = topViewController.presentedViewController!
-		}
-		return topViewController
-	}
+    func topViewController() -> UIViewController? {
+        guard var topViewController = UIApplication.sharedApplication().keyWindow?.rootViewController else {
+            return nil
+        }
+
+        while case .Some = topViewController.presentedViewController {
+            topViewController = topViewController.presentedViewController!
+        }
+        return topViewController
+    }
 }

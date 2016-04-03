@@ -10,9 +10,9 @@ import UIKit
 
 struct AppNavigation {
 
-	static func setup() {
-		UINavigationBar.appearance().barTintColor = SlackColor.purple
-		UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-	}
+    static func setup() {
+        UINavigationBar.appearance().barTintColor = SlackColor.purple
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+    }
 }

@@ -10,9 +10,9 @@ import Foundation
 import KeychainAccess
 
 struct KeyChainStorage {
-    
+
     let keyChain: Keychain
-    
+
     init(persistent: Persistent = .Default) {
         self.keyChain = persistent.toKeyChain()
     }
@@ -21,11 +21,11 @@ struct KeyChainStorage {
 // MARK: - Persistent
 
 extension KeyChainStorage {
-    
+
     enum Persistent {
         case Default
         case Test
-        
+
         private func toKeyChain() -> Keychain {
             switch self {
             case .Default:

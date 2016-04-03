@@ -10,9 +10,9 @@ import Foundation
 import RealmSwift
 
 struct RealmStorage {
-    
+
     private let realm: Realm
-    
+
     init(persistent: Persistent = .Disc) {
         self.realm = persistent.toRealm()
     }
@@ -21,11 +21,11 @@ struct RealmStorage {
 // MARK: - Persistent
 
 extension RealmStorage {
-    
+
     enum Persistent {
         case Disc
         case InMemory
-        
+
         private func toRealm() -> Realm {
             switch self {
             case .Disc:
@@ -40,32 +40,32 @@ extension RealmStorage {
 // MARK: - Reader/Writer
 
 extension RealmStorage {
-    
+
     func read<A: Object>(type: A.Type) -> Results<A> {
         return realm.objects(type)
     }
-    
+
     func add(object: Object) throws {
         try realm.write {
             realm.add(object)
         }
     }
-    
+
     func delete(object: Object) throws {
         try realm.write {
             realm.delete(object)
         }
     }
 
-	func deleteAll<A: Object>(type: A.Type) throws {
-		try realm.write {
-			realm.delete(read(type))
-		}
-	}
+    func deleteAll<A: Object>(type: A.Type) throws {
+        try realm.write {
+            realm.delete(read(type))
+        }
+    }
 
-	func purge() throws {
-		try realm.write {
-			realm.deleteAll()
-		}
-	}
+    func purge() throws {
+        try realm.write {
+            realm.deleteAll()
+        }
+    }
 }

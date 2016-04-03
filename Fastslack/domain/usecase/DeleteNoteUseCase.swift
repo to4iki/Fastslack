@@ -11,51 +11,51 @@ import RxSwift
 
 final class DeleteNoteUseCase {
 
-	private let repository: NoteRepository
+    private let repository: NoteRepository
 
-	init(repository: NoteRepository = RealmNoteRepository()) {
-		self.repository = repository
-	}
+    init(repository: NoteRepository = RealmNoteRepository()) {
+        self.repository = repository
+    }
 }
 
 // MARK: - Action
 
 extension DeleteNoteUseCase {
 
-	func delete(note: Note) -> Observable<Bool> {
-		return Observable.create { observer in
-			do {
-				try self.repository.delete(note)
-				observer.onNext(true)
-				observer.onCompleted()
-			} catch {
-				observer.onError(ErrorBundle.DeleteError(message: "delete note failure."))
-			}
+    func delete(note: Note) -> Observable<Bool> {
+        return Observable.create { observer in
+            do {
+                try self.repository.delete(note)
+                observer.onNext(true)
+                observer.onCompleted()
+            } catch {
+                observer.onError(ErrorBundle.DeleteError(message: "delete note failure."))
+            }
 
-			return NopDisposable.instance
-		}
-	}
+            return NopDisposable.instance
+        }
+    }
 
-	func deleteAll() -> Observable<Bool> {
-		return Observable.create { observer in
-			do {
-				try self.repository.deleteAll()
-				observer.onNext(true)
-				observer.onCompleted()
-			} catch {
-				observer.onError(ErrorBundle.DeleteError(message: "deleteAll note failure."))
-			}
+    func deleteAll() -> Observable<Bool> {
+        return Observable.create { observer in
+            do {
+                try self.repository.deleteAll()
+                observer.onNext(true)
+                observer.onCompleted()
+            } catch {
+                observer.onError(ErrorBundle.DeleteError(message: "deleteAll note failure."))
+            }
 
-			return NopDisposable.instance
-		}
-	}
+            return NopDisposable.instance
+        }
+    }
 
-	func deleteAllExpired() -> Observable<Bool> {
-		return repository.findAll(.Asc).toObservable()
-			.filter { (note: Note) in
-				note.expired
-			}.flatMap { (note: Note) in
-				self.delete(note)
-		}
-	}
+    func deleteAllExpired() -> Observable<Bool> {
+        return repository.findAll(.Asc).toObservable()
+            .filter { (note: Note) in
+                note.expired
+            }.flatMap { (note: Note) in
+                self.delete(note)
+        }
+    }
 }

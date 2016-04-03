@@ -10,10 +10,10 @@ import Foundation
 
 let dateFormatter: NSDateFormatter = {
     let formatter = NSDateFormatter()
-    
+
     formatter.timeStyle = .LongStyle
     formatter.dateStyle = .ShortStyle
     formatter.dateFormat = "yyyy/MM/dd HH:mm"
-    
+
     return formatter
 }()

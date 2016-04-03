@@ -10,24 +10,24 @@ import Foundation
 
 struct NoteReadDto {
 
-	let body: String
+    let body: String
 
-	let createdAt: String
+    let createdAt: String
 
-	private let note: Note
+    private let note: Note
 
-	init(entity: Note) {
-		self.note = entity
-		self.body = entity.body
-		self.createdAt = dateFormatter.stringFromDate(entity.createdAt)
-	}
+    init(entity: Note) {
+        self.note = entity
+        self.body = entity.body
+        self.createdAt = dateFormatter.stringFromDate(entity.createdAt)
+    }
 }
 
 // MARK: - Converter
 
 extension NoteReadDto {
 
-	func convertNote() -> Note {
-		return note
-	}
+    func convertNote() -> Note {
+        return note
+    }
 }

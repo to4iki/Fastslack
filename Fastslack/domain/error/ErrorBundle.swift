@@ -9,7 +9,7 @@
 import Foundation
 
 enum ErrorBundle: ErrorType {
-    
+
     case SendError(message: String)
     case FetchError(message: String)
     case StoreError(message: String)

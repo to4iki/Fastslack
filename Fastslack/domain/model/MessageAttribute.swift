@@ -10,24 +10,24 @@ import Foundation
 
 struct MessageAttribute: ValueObject {
 
-	let channel: String
+    let channel: String
 
-	let botName: String
+    let botName: String
 
-	let iconEmoji: String
+    let iconEmoji: String
 }
 
 // MARK: - CustomStringConvertible
 
 extension MessageAttribute {
 
-	var description: String {
-		return "MessageAttribute(channel: \(channel), botName: \(botName), iconEmoji: \(iconEmoji))"
-	}
+    var description: String {
+        return "MessageAttribute(channel: \(channel), botName: \(botName), iconEmoji: \(iconEmoji))"
+    }
 }
 
 // MARK: - Equtable
 
 func == (lhs: MessageAttribute, rhs: MessageAttribute) -> Bool {
-	return lhs.channel == rhs.channel && lhs.botName == rhs.botName && lhs.iconEmoji == rhs.iconEmoji
+    return lhs.channel == rhs.channel && lhs.botName == rhs.botName && lhs.iconEmoji == rhs.iconEmoji
 }

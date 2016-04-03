@@ -14,14 +14,14 @@ final class NoteListFooterView: UIView {
 }
 
 extension NoteListFooterView {
-    
+
     private static func nib() -> UINib {
         return UINib(nibName: NibName, bundle: nil)
     }
-    
+
     static func insance() -> NoteListFooterView {
         guard let view = nib().instantiateWithOwner(self, options: nil)[0] as? NoteListFooterView else {
-             fatalError("failure instanced NoteListFooterView.")
+            fatalError("failure instanced NoteListFooterView.")
         }
         return view
     }

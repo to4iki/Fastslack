@@ -12,84 +12,84 @@ import RxCocoa
 
 final class MainViewController: UIViewController {
 
-	@IBOutlet private weak var textView: UITextView! {
-		didSet {
-			automaticallyAdjustsScrollViewInsets = false
-		}
-	}
+    @IBOutlet private weak var textView: UITextView! {
+        didSet {
+            automaticallyAdjustsScrollViewInsets = false
+        }
+    }
 
-	@IBOutlet private weak var doneButton: UIBarButtonItem! {
-		didSet {
-			doneButton.enabled = false
-		}
-	}
+    @IBOutlet private weak var doneButton: UIBarButtonItem! {
+        didSet {
+            doneButton.enabled = false
+        }
+    }
 
-	private let presenter = EntryNotePresenter()
+    private let presenter = EntryNotePresenter()
 
-	private let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
 }
 
 // MARK: - UIViewController
 
 extension MainViewController {
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-		bind()
-	}
+        bind()
+    }
 
-	override func viewWillAppear(animated: Bool) {
-		super.viewWillAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
 
-		presenter.viewWillAppear(animated)
-		autoFocus()
-	}
+        presenter.viewWillAppear(animated)
+        autoFocus()
+    }
 }
 
 // MARK: - UI
 
 extension MainViewController {
 
-	private func bind() {
-		presenter.body.asObservable()
-			.bindTo(textView.rx_text)
-			.addDisposableTo(disposeBag)
+    private func bind() {
+        presenter.body.asObservable()
+            .bindTo(textView.rx_text)
+            .addDisposableTo(disposeBag)
 
-		textView.rx_text
-			.filter { !$0.isEmpty }
-			.subscribeNext { [unowned self] text in
-				self.presenter.body.value = text
-			}
-			.addDisposableTo(disposeBag)
+        textView.rx_text
+            .filter { !$0.isEmpty }
+            .subscribeNext { [unowned self] text in
+                self.presenter.body.value = text
+            }
+            .addDisposableTo(disposeBag)
 
-		textView.rx_text
-			.map { !$0.isEmpty }
-			.bindTo(doneButton.rx_enabled)
-			.addDisposableTo(disposeBag)
+        textView.rx_text
+            .map { !$0.isEmpty }
+            .bindTo(doneButton.rx_enabled)
+            .addDisposableTo(disposeBag)
 
-		doneButton.rx_tap
-			.subscribeNext { [unowned self] _ in
-				self.presenter.send()
-			}
-			.addDisposableTo(disposeBag)
-	}
+        doneButton.rx_tap
+            .subscribeNext { [unowned self] _ in
+                self.presenter.send()
+            }
+            .addDisposableTo(disposeBag)
+    }
 
-	private func autoFocus() {
-		textView.becomeFirstResponder()
-	}
+    private func autoFocus() {
+        textView.becomeFirstResponder()
+    }
 }
 
 // MARK: - Segue
 
 extension MainViewController {
 
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		guard let toViewController = segue.destinationViewController.childViewControllers.first as? NoteListViewController
-			where segue.identifier == "NoteListSegue" else { fatalError() }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        guard let toViewController = segue.destinationViewController.childViewControllers.first as? NoteListViewController
+            where segue.identifier == "NoteListSegue" else { fatalError() }
 
-		toViewController.setCloseCompletionHandler({
-			log.info("close notes view controller.")
-		})
-	}
+        toViewController.setCloseCompletionHandler({
+            log.info("close notes view controller.")
+        })
+    }
 }

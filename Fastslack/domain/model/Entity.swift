@@ -9,6 +9,6 @@
 import Foundation
 
 protocol Entity: CustomStringConvertible, Equatable {
-    
+
     var id: Int { get }
 }

@@ -10,18 +10,18 @@ import Foundation
 import RxSwift
 
 final class EntryNoteUseCase {
-    
-	private let repository: NoteRepository
 
-	init(repository: NoteRepository = RealmNoteRepository()) {
-		self.repository = repository
-	}
+    private let repository: NoteRepository
+
+    init(repository: NoteRepository = RealmNoteRepository()) {
+        self.repository = repository
+    }
 }
 
 // MARK: - Action
 
 extension EntryNoteUseCase {
-    
+
     func entry(note: Note) -> Observable<Note> {
         return Observable.create { observer in
             do {
@@ -31,7 +31,7 @@ extension EntryNoteUseCase {
             } catch {
                 observer.onError(ErrorBundle.StoreError(message: "entry note failure."))
             }
-            
+
             return NopDisposable.instance
         }
     }

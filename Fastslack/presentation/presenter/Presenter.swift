@@ -10,29 +10,29 @@ import Foundation
 
 /// I/F
 protocol Presenter: class {
-    
+
     func viewDidLoad()
-    
+
     func viewWillAppear(animated: Bool)
-    
+
     func viewDidAppear(animated: Bool)
-    
+
     func viewWillDisappear(animated: Bool)
-    
+
     func viewDidDisappear(animated: Bool)
 }
 
 // MARK: - LifeCycle
 
 extension Presenter {
-    
-    func viewDidLoad() {}
-    
-    func viewWillAppear(animated: Bool) {}
-    
-    func viewDidAppear(animated: Bool) {}
-    
-    func viewWillDisappear(animated: Bool) {}
-    
-    func viewDidDisappear(animated: Bool) {}
+
+    func viewDidLoad() { }
+
+    func viewWillAppear(animated: Bool) { }
+
+    func viewDidAppear(animated: Bool) { }
+
+    func viewWillDisappear(animated: Bool) { }
+
+    func viewDidDisappear(animated: Bool) { }
 }

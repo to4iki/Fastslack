@@ -11,15 +11,15 @@ import Slack
 
 extension Slack.Message {
 
-	static var defaultChannel: String {
-		return "#general"
-	}
+    static var defaultChannel: String {
+        return "#general"
+    }
 
-	static var defaultBotName: String {
-		return "fastslack"
-	}
+    static var defaultBotName: String {
+        return "fastslack"
+    }
 
-	static var defaultIconEmoji: String {
-		return ":slack:"
-	}
+    static var defaultIconEmoji: String {
+        return ":slack:"
+    }
 }
