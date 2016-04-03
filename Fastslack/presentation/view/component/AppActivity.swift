@@ -12,29 +12,15 @@ import Result
 
 final class AppActivity {
 
-	private let text: String
+	private let item: ActivityItem
 
-	private let url: NSURL?
-
-	private let image: UIImage?
-
-	private var activityItems: [AnyObject] {
-		return [text] + [url, image].reduce([]) { (acc: [AnyObject], x: AnyObject?) in
-			if let x = x {
-				return acc + [x]
-			} else {
-				return acc
-			}
-		}
-	}
+	private let applicationActivities = [SendNoteAgainActivity()]
 
 	private lazy var activityViewController: UIActivityViewController =
-		UIActivityViewController(activityItems: self.activityItems, applicationActivities: nil)
+		UIActivityViewController(activityItems: self.item.toArray(), applicationActivities: self.applicationActivities)
 
-	init(text: String, url: NSURL? = nil, image: UIImage? = nil) {
-		self.text = text
-		self.url = url
-		self.image = image
+	init(item: ActivityItem) {
+		self.item = item
 	}
 }
 
