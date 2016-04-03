@@ -17,7 +17,7 @@ final class NoteListPresenter {
     
     private lazy var deleteUseCase = DeleteNoteUseCase()
     
-    private(set) var notes = Variable<[Note]>([])
+    private(set) var notes = Variable<[NoteReadDto]>([])
 }
 
 // MARK: - Presenter
@@ -38,15 +38,18 @@ extension NoteListPresenter {
 			.filter { (note: Note) in
 				!note.expired
 			}
-            .subscribeNext { [unowned self] (note: Note) in
+			.map { (note: Note) in
+				NoteReadDto(entity: note)
+			}
+            .subscribeNext { [unowned self] (note: NoteReadDto) in
                 self.notes.value.append(note)
             }
             .addDisposableTo(disposeBag)
     }
     
     func deleteNoteBy(index: Int) {
-        let note = notes.value[index]
-        
+		let note = notes.value[index].convertNote()
+		
         deleteUseCase.delete(note)
             .subscribeNext { [unowned self] (success: Bool) in
                 if success {
