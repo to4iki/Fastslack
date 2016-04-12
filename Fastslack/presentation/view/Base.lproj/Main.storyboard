@@ -63,7 +63,7 @@
                                 <segue destination="qod-cV-33S" kind="presentation" identifier="NoteListSegue" id="8Ls-0z-NtM"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="dZc-Dp-9Tc"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="dZc-Dp-9Tc"/>
                     </navigationItem>
                     <connections>
                         <outlet property="doneButton" destination="dZc-Dp-9Tc" id="zSK-wn-MFq"/>
