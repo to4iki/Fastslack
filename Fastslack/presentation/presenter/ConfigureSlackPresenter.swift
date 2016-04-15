@@ -14,10 +14,6 @@ final class ConfigureSlackPresenter {
 
     private let disposeBag = DisposeBag()
 
-    private lazy var configureSlackUseCase = ConfigureSlackUseCase()
-
-    private lazy var deleteNoteUseCase = DeleteNoteUseCase()
-
     private(set) var webHookURL = Variable<String>("")
 
     private(set) var channel = Variable<String>(Slack.Message.defaultChannel)
@@ -25,6 +21,12 @@ final class ConfigureSlackPresenter {
     private(set) var botName = Variable<String>(Slack.Message.defaultBotName)
 
     private(set) var iconEmoji = Variable<String>(Slack.Message.defaultIconEmoji)
+
+    private let configureSlackUseCase: ConfigureSlackUseCase
+
+    init(configureSlackUseCase: ConfigureSlackUseCase = ConfigureSlackUseCase()) {
+        self.configureSlackUseCase = configureSlackUseCase
+    }
 }
 
 // MARK: - Presenter

@@ -13,11 +13,16 @@ final class NoteListPresenter {
 
     private let disposeBag = DisposeBag()
 
-    private lazy var fetchUseCase = FetchNoteUseCase()
-
-    private lazy var deleteUseCase = DeleteNoteUseCase()
-
     private(set) var notes = Variable<[NoteReadDto]>([])
+
+    private let fetchNoteUseCase: FetchNoteUseCase
+
+    private let deleteNoteUseCase: DeleteNoteUseCase
+
+    init(fetchNoteUseCase: FetchNoteUseCase = FetchNoteUseCase(), deleteNoteUseCase: DeleteNoteUseCase = DeleteNoteUseCase()) {
+        self.fetchNoteUseCase = fetchNoteUseCase
+        self.deleteNoteUseCase = deleteNoteUseCase
+    }
 }
 
 // MARK: - Presenter
@@ -34,7 +39,7 @@ extension NoteListPresenter: Presenter {
 extension NoteListPresenter {
 
     private func fetchNonExpiredNote() {
-        fetchUseCase.fetchAll()
+        fetchNoteUseCase.fetchAll()
             .filter { (note: Note) in
                 !note.expired
             }
@@ -55,7 +60,7 @@ extension NoteListPresenter {
     func deleteNoteBy(index: Int) {
         let note = notes.value[index].convertNote()
 
-        deleteUseCase.delete(note)
+        deleteNoteUseCase.delete(note)
             .subscribeNext { [unowned self](success: Bool) in
                 if success {
                     self.notes.value.removeAtIndex(index)

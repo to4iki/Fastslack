@@ -9,6 +9,7 @@
 import Foundation
 
 /// I/F
+/// Subscriber
 protocol Presenter: class {
 
     func viewDidLoad()

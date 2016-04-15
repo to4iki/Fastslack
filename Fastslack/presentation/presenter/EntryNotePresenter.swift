@@ -14,17 +14,27 @@ final class EntryNotePresenter {
 
     private let disposeBag = DisposeBag()
 
-    private let sendRetryMaxAttemptCount = 1
-
-    private lazy var entryUseCase = EntryNoteUseCase()
-
-    private lazy var sendUseCase = SendSlackUseCase()
-
-    private lazy var configureSlackUseCase = ConfigureSlackUseCase()
-
     private(set) var body = Variable<String>("")
 
+    private let sendRetryMaxAttemptCount = 1
+
     private var messageAttribute: MessageAttribute?
+
+    private let entryNoteUseCase: EntryNoteUseCase
+
+    private let sendSlackUseCase: SendSlackUseCase
+
+    private let configureSlackUseCase: ConfigureSlackUseCase
+
+    init(
+        entryNoteUseCase: EntryNoteUseCase = EntryNoteUseCase(),
+        sendSlackUseCase: SendSlackUseCase = SendSlackUseCase(),
+        configureSlackUseCase: ConfigureSlackUseCase = ConfigureSlackUseCase()
+    ) {
+        self.entryNoteUseCase = entryNoteUseCase
+        self.sendSlackUseCase = sendSlackUseCase
+        self.configureSlackUseCase = configureSlackUseCase
+    }
 }
 
 // MARK: - Presenter
@@ -47,10 +57,10 @@ extension EntryNotePresenter {
 
         let writer = NoteWriteDto(body: body.value)
 
-        sendUseCase.send(writer.convertSlackMessage(attr))
+        sendSlackUseCase.send(writer.convertSlackMessage(attr))
             .retry(sendRetryMaxAttemptCount)
             .flatMap { _ -> Observable<Note> in
-                self.entryUseCase.entry(writer.convertNote())
+                self.entryNoteUseCase.entry(writer.convertNote())
             }
             .subscribeCompleted { [unowned self] in
                 self.body.value = ""
@@ -67,11 +77,11 @@ extension EntryNotePresenter {
                 writer.convertSlackMessage(attr)
             }
             .flatMap { [unowned self](message: Slack.Message) in
-                self.sendUseCase.send(message)
+                self.sendSlackUseCase.send(message)
             }
             .retry(sendRetryMaxAttemptCount)
             .flatMap { _ -> Observable<Note> in
-                self.entryUseCase.entry(writer.convertNote())
+                self.entryNoteUseCase.entry(writer.convertNote())
             }
             .subscribeCompleted { [unowned self] in
                 self.body.value = ""
